@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a7cdaee2-9bc5-4e8c-af4c-bb882673a60c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectId" id="1WCE9utWOKMRI0fs9lsqdqvgtSi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7cdaee2-9bc5-4e8c-af4c-bb882673a60c" name="Default Changelist" comment="" />
+      <created>1578645029256</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578645029256</updated>
+      <workItem from="1578645032791" duration="19559000" />
+      <workItem from="1578990594028" duration="14405000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="880" y="363" key="#Inspections" timestamp="1578990849399">
+      <screen x="0" y="23" width="2560" height="1349" />
+    </state>
+    <state x="880" y="363" key="#Inspections/2560.23.1920.1057/0.23.2560.1349@0.23.2560.1349" timestamp="1578990849399" />
+    <state x="789" y="336" key="SettingsEditor" timestamp="1578645198162">
+      <screen x="0" y="23" width="2560" height="1349" />
+    </state>
+    <state x="789" y="336" key="SettingsEditor/2560.23.1920.1057/0.23.2560.1349@0.23.2560.1349" timestamp="1578645198162" />
+    <state x="959" y="529" key="com.intellij.ide.util.TipDialog" timestamp="1578990596844">
+      <screen x="0" y="23" width="2560" height="1349" />
+    </state>
+    <state x="959" y="529" key="com.intellij.ide.util.TipDialog/2560.23.1920.1057/0.23.2560.1349@0.23.2560.1349" timestamp="1578990596844" />
+  </component>
+</project>

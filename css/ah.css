@@ -1,0 +1,43 @@
+.navbar, .main-navigation ul ul{
+    background:rgba(0, 103, 127, .7);
+    z-index: 9999;
+}
+ .site-footer, .site-header, .part-vittnesmal-section, .ff-label-wrapper.custom, #search-filter-form-9890, .siteBg, .primary{
+    background-color:#00677f;
+}
+.icon_container span.iconimg{
+    background:rgba(0, 103, 127, .7); 
+}
+.btn-primary {
+    background-color:#c5003e;
+    border-color:#c5003e;
+    color: #fff !important;
+}
+.btn-primary:hover {
+    background-color:#ac0036;
+    border-color:#ac0036;
+}
+.bg-light {
+    background:#f2f2f2 !important;
+    
+}
+.spicewpsearchform{
+    border: 5px solid rgb(0, 103, 127);
+}
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a, .entry-content h1,  .entry-content h2, .entry-content h3, .entry-content h4 {
+	color: #00677f;
+}
+
+/*--------------------------------------------------------------
+## fonts
+--------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Gotham SSm 7r", "Gotham SSm A", "Gotham SSm B";
+    font-style: normal;
+    font-weight: 700;
+}
