@@ -4,7 +4,7 @@
 $vittnesmal_background = get_sub_field('background_image');
 ?>
 
-<section class="part-vittnesmal-section clearfix" style="background-image:url(<?php echo $vittnesmal_background; ?>)">
+<section class="part-vittnesmal-section home-section clearfix " style="background-image:url(<?php echo $vittnesmal_background; ?>)">
 
     <div class="container">
         <div class="row">

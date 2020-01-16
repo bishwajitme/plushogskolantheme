@@ -21,14 +21,47 @@
     background:#f2f2f2 !important;
     
 }
+.header_overlay {
+    background: rgba(0, 103, 127, .5);
+}
 .spicewpsearchform{
     border: 5px solid rgb(0, 103, 127);
 }
 
+.class_kurs:hover {
+     background-color: rgba(197, 0, 62,.15);
+     color: #fff;
+ }
+.md-accordion .card-header {
+    border-bottom: 1px solid rgba(0, 103, 127,.4);
+}
+
+.class_certi:hover {
+     background-color: rgba(0, 72, 81,.18);
+ }
+
+.class_yh {
+    background: #f2f2f2;
+}
+.class_yh:hover {
+     background-color: rgba(0, 103, 127,.25);
+ }
+
+
+.certifiering{
+    background-color: rgb(0, 72, 81);
+}
+.kurs{
+    background-color: rgb(197, 0, 62);
+}
+
+
+
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a, .entry-content h1,  .entry-content h2, .entry-content h3, .entry-content h4 {
+a, .site-content a:hover, .entry-content h1,  .entry-content h2, .entry-content h3, .entry-content h4, .ico-class, .md-accordion .card-header a {
 	color: #00677f;
 }
 
@@ -40,4 +73,22 @@ h1, h2, h3, h4, h5, h6{
     font-family: "Gotham SSm 7r", "Gotham SSm A", "Gotham SSm B";
     font-style: normal;
     font-weight: 700;
+}
+@keyframes scroll {
+    0%  	{margin-top: 0px;}
+    10% 	{margin-top: 0px;}
+
+    20%  {margin-top: -40pt;}
+    30%  {margin-top: -40pt;}
+
+    40%  {margin-top: -80pt;}
+    50%  {margin-top: -80pt;}
+
+    60%  {margin-top: -120pt;}
+    70%  {margin-top: -120pt;}
+
+    80%  {margin-top: -160pt;}
+    90%  {margin-top: -160pt;}
+
+    100% {margin-top: 0px;}
 }

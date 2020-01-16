@@ -42,12 +42,15 @@ if ($query->have_posts()) {
                     $metaStartDate = get_field('metaStartDate');
                     $meta_location = get_field('metaLocation');
                     $meta_locationText = get_field('metaLocationText');
+                    //var_dump($meta_locationText);
+                    $distance_loc = FALSE;
                     if ($meta_location):
                         $meta_location_count = count($meta_location);
                         $counter = 1;
                         $meta_location_text = '';
                         foreach ($meta_location as $location):
                             $location_title = get_the_title($location->ID);
+
                             $meta_location_text = $meta_location_text . $location_title;
 
                             if ($counter < $meta_location_count) {
@@ -56,6 +59,10 @@ if ($query->have_posts()) {
                             $counter++;
                         endforeach;
                     endif;
+
+                   /* find if it is Distans education */
+                    $distance_loc = strpos($meta_location_text, 'Distans');;
+
 
                     if ($meta_locationText == "") {
                         $meta_locationText = $meta_location_text;
@@ -76,27 +83,27 @@ if ($query->have_posts()) {
                     ?>
 
 
-                    <div class="utbildning-entry col-lg-4 col-md-4 col-sm-12">
-                        <div class="bg-light <?php echo $utbildningClass; ?>">
+                    <div class="utbildning-entry easyanimator col-lg-4 col-md-4 col-sm-12">
+                        <div class="bg-container <?php echo $utbildningClass; ?>">
                             <div class="p-3 utbildning-entry-text">
                                 <h6 class="ff-label-wrapper custom"><?php echo $utbildningstypText; ?></h6>
-                                <h3 class="utbildning_title card-title mt-4"><a href="<?php echo $permalink; ?>"
+                                <h3 class="utbildning_title card-title mt-4 mb-4"><a href="<?php echo $permalink; ?>"
                                                                                 title="<?php echo $title; ?> link"><?php echo $title; ?></a>
                                 </h3>
-                                <p class="program_meta"><span class="icon-location"></span>
+                                <p class="program_meta"><span class="ico-class icon-location"></span>
                                     <span class="meta_text pl-2"
-                                          title="<?php echo $meta_locationText; ?>"><?php echo $meta_location_count > 1 ? $meta_location_count . ' orter' : $meta_locationText; ?></span>
+                                          title="<?php echo $meta_locationText; ?>"><?php echo ($meta_location_count > 1) && $distance_loc ? $meta_location_count . ' orter' : $meta_locationText; ?></span>
                                 </p>
                                 <?php if ($meta_start != ""): ?>
-                                    <p class="program_meta"><span class="icon-alarm"></span> <span
+                                    <p class="program_meta"><span class="ico-class icon-alarm"></span> <span
                                                 class="meta_text pl-2"><?php echo $meta_start->name; ?></span></p>
                                 <?php endif;
                                 if ($metaScope != ""): ?>
-                                    <p class="program_meta"><span class="icon-lightbulb-o"></span> <span
+                                    <p class="program_meta"><span class="ico-class icon-lightbulb-o"></span> <span
                                                 class="meta_text pl-2"><?php echo $metaScope; ?></span></p>
                                 <?php endif;
                                 if ($metaStartDate != ""): ?>
-                                    <p class="program_meta"><span class="icon-laptop"></span> <span
+                                    <p class="program_meta"><span class="ico-class icon-laptop"></span> <span
                                                 class="meta_text pl-2"><?php echo $metaStartDate; ?></span></p>
                                 <?php endif; ?>
                                 <p class="program_meta pt-4">&nbsp;</p>

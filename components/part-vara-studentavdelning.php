@@ -5,7 +5,7 @@ $mv_studentavdelning_image = get_sub_field('mv_studentavdelning_image');
 
 ?>
 
-<section class="mot_vara_studentavdelning pt-4 pb-4 mt-4 mb-4 clearfix">
+<section class="mot_vara_studentavdelning home-section easyanimator clearfix">
 
     <div class="container">
 

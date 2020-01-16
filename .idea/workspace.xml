@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7cdaee2-9bc5-4e8c-af4c-bb882673a60c" name="Default Changelist" comment="" />
+    <list default="true" id="a7cdaee2-9bc5-4e8c-af4c-bb882673a60c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/icomoon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/icomoon.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/icomoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/icomoon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/icomoon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/icomoon.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/icomoon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/icomoon.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/part-aspekter-av-skolan.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/part-aspekter-av-skolan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/part-counters-section.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/part-counters-section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/part-events-section.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/part-events-section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/part-samarbetsforetag-avsnitt.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/part-samarbetsforetag-avsnitt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/part-senaste-nyhetsavsnittet.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/part-senaste-nyhetsavsnittet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/part-utbildningsomraden.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/part-utbildningsomraden.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/part-vara-studentavdelning.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/part-vara-studentavdelning.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/part-vittnesmal-avsnitt.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/part-vittnesmal-avsnitt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/post-item.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/post-item.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ah.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ah.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-template-locations.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-template-locations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-template-utbildninger.php" beforeDir="false" afterPath="$PROJECT_DIR$/page-template-utbildninger.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-filter/9897.php" beforeDir="false" afterPath="$PROJECT_DIR$/search-filter/9897.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single-studieort.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-studieort.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single-utbildning.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-utbildning.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/single.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,7 +42,18 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1WCE9utWOKMRI0fs9lsqdqvgtSi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -20,6 +61,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -55,7 +97,10 @@
       <option name="presentableId" value="Default" />
       <updated>1578645029256</updated>
       <workItem from="1578645032791" duration="19559000" />
-      <workItem from="1578990594028" duration="14405000" />
+      <workItem from="1578990594028" duration="15105000" />
+      <workItem from="1579079339906" duration="1818000" />
+      <workItem from="1579095083861" duration="806000" />
+      <workItem from="1579161529127" duration="17217000" />
     </task>
     <servers />
   </component>
@@ -71,9 +116,14 @@
       <screen x="0" y="23" width="2560" height="1349" />
     </state>
     <state x="789" y="336" key="SettingsEditor/2560.23.1920.1057/0.23.2560.1349@0.23.2560.1349" timestamp="1578645198162" />
-    <state x="959" y="529" key="com.intellij.ide.util.TipDialog" timestamp="1578990596844">
+    <state x="959" y="529" key="com.intellij.ide.util.TipDialog" timestamp="1579161554130">
       <screen x="0" y="23" width="2560" height="1349" />
     </state>
-    <state x="959" y="529" key="com.intellij.ide.util.TipDialog/2560.23.1920.1057/0.23.2560.1349@0.23.2560.1349" timestamp="1578990596844" />
+    <state x="719" y="395" key="com.intellij.ide.util.TipDialog/0.23.1920.991@0.23.1920.991" timestamp="1579079341504" />
+    <state x="959" y="529" key="com.intellij.ide.util.TipDialog/2560.23.1920.1057/0.23.2560.1349@0.23.2560.1349" timestamp="1579161554130" />
+    <state x="946" y="333" width="667" height="729" key="find.popup" timestamp="1579165568289">
+      <screen x="0" y="23" width="2560" height="1349" />
+    </state>
+    <state x="946" y="333" width="667" height="729" key="find.popup/2560.23.1920.1057/0.23.2560.1349@0.23.2560.1349" timestamp="1579165568289" />
   </component>
 </project>

@@ -5,7 +5,7 @@ $aspekter_background = get_sub_field('aspekter_background');
 
 ?>
 
-<section class="part-viktiga-aspekter-av-skolan pt-4 pb-4 clearfix" style="background:<?php echo $aspekter_background; ?>">
+<section class="part-viktiga-aspekter-av-skolan home-section easyanimator clearfix" style="background:<?php echo $aspekter_background; ?>">
 
     <div class="container">
         <h2 class="section_title text-left text-white pt-4 pb-4"><?php echo $utbildningsomraden; ?></h2>

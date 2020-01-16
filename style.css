@@ -507,6 +507,70 @@ dd {
     margin: 0 1.5em 1.5em;
 }
 
+.content-area ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    height: 6px;
+    width: 6px;
+    background-color: #c5003e;
+    border-radius: 10px;
+}
+
+.content-area ul {
+    line-height: 1.6em;
+    color: #3f3f3f;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+ .content-area ul {
+    list-style: none;
+}
+
+.content-area ul li {
+    position: relative;
+    padding-left: 22px;
+}
+blockquote {
+    font: 400 1em Arial,sans-serif;
+    margin: 50px 0 30px;
+}
+blockquote p {
+    font-size: 24px;
+    color: #c5003e;
+    padding-left: 50px;
+    position: relative;
+    margin-bottom: 0;
+
+}
+blockquote p:first-child::before {
+    content: '\e903';
+    color: #CF003e;
+    font-size: 3.5em;
+    font-weight: 700;
+    opacity: .3;
+    position: absolute;
+    top: -.4em;
+    left: .2em;
+    text-shadow: none;
+    z-index: -300;
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 img {
     height: auto;
     /* Make sure images are scaled correctly. */
@@ -683,6 +747,7 @@ a:hover, a:active {
     display: block;
 
 }
+
 .menu-toggle {
     position: absolute;
     right: 20px;
@@ -697,13 +762,12 @@ a:hover, a:active {
     text-align: right;
     min-height: 500px;
     z-index: 9999999;
-    background:
-
-            red;
+    background: red;
     display: flex;
     top: 100px;
 
 }
+
 @media screen and (min-width: 37.5em) {
     .menu-toggle {
         display: none;
@@ -999,7 +1063,6 @@ object {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 100%;
 }
@@ -1014,7 +1077,7 @@ object {
 }
 
 .site-branding img {
-    width: 120px;
+    width: 105px;
     height: auto;
     z-index: 999;
 }
@@ -1037,6 +1100,12 @@ object {
 
 .home .page-title {
     text-align: left;
+    font-weight: 400;
+}
+
+.home-section {
+    padding: 40px 0;
+    margin: 30px 0;
 }
 
 .hero_text {
@@ -1053,6 +1122,10 @@ object {
 .site-footer {
     padding: 50px 0;
     color: #fff;
+}
+
+.site-footer h3 {
+    font-size: 1.3rem;
 }
 
 .footer-logo img {
@@ -1169,22 +1242,22 @@ object {
     font-weight: bold;
 }
 
-.sidebar_menu li.current-menu-item::before {
+.sidebar_menu li.current-menu-item::before, .sidebar_menu li:not(.current-menu-item):hover::before {
     content: "";
     position: absolute;
     left: -25px;
     top: 5px;
     height: 100%;
-    width: 20px;
+    width: 15px;
     background-color: #00677f;
     max-height: 50px;
 }
 
-.sidebar_menu .current-menu-ancestor li.current-menu-item::before {
+.sidebar_menu .current-menu-ancestor li.current-menu-item::before, .sidebar_menu .current-menu-ancestor li:not(.current-menu-item):hover::before {
     left: -40px;
 }
 
-.sidebar_menu .current-menu-ancestor li li.current-menu-item::before {
+.sidebar_menu .current-menu-ancestor li li.current-menu-item::before, .sidebar_menu .current-menu-ancestor li li:not(.current-menu-item):hover::before {
     left: -55px;
 }
 
@@ -1268,7 +1341,12 @@ object {
     transform: translate3d(0, 0, 0);
 }
 
-.hovereffect a, .hovereffect p {
+.hovereffect a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.hovereffect a.info, .hovereffect p {
     color: #FFF;
     opacity: 0;
     filter: alpha(opacity=0);
@@ -1285,6 +1363,9 @@ object {
     transform: translate3d(0, 45px, 0);
 }
 
+.orter_text {
+    font-size: 1.3em;
+}
 
 /*--------------------------------------------------------------
 ## part-viktiga-aspekter-av-skolan
@@ -1325,7 +1406,8 @@ object {
     object-fit: cover;
     min-height: 200px;
 }
-.minImageHeight{
+
+.minImageHeight {
     min-height: 200px;
 }
 
@@ -1415,7 +1497,7 @@ object {
 .ff-label-wrapper.custom {
     position: absolute;
     top: 0px;
-    right: 40px;
+    right: 30px;
     text-align: center;
     padding: 5px 15px;
     color: #fff;
@@ -1423,7 +1505,7 @@ object {
 }
 
 .event-entry .card-img-top {
-    max-height: 230px;
+    height: 200px;
     position: relative;
     object-fit: cover;
 }
@@ -1450,6 +1532,24 @@ object {
     padding-bottom: 30px;
 }
 
+/*--------------------------------------------------------------
+## 	content visible animation
+--------------------------------------------------------------*/
+
+.come-in {
+    transform: translateY(150px);
+    animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+    animation-duration: 0.6s; /* So they look staggered */
+}
+
+@keyframes come-in {
+    to {
+        transform: translateY(0);
+    }
+}
 
 /*--------------------------------------------------------------
 ## 	Nyhetsrum page
@@ -1504,7 +1604,7 @@ object {
     font-weight: bold;
 }
 
-.utbildning-entry .bg-light {
+.utbildning-entry .bg-container {
     min-height: 250px;
     height: 100%;
 }
@@ -1514,11 +1614,19 @@ object {
 }
 
 .utbildning-entry {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.utbildning-entry .ico-class {
+    font-size: 22px;
+    text-align: center;
+    min-width: 30px;
 }
 
 .program_meta {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     display: flex;
 }
 
@@ -1604,6 +1712,19 @@ object {
 
 }
 
+.md-accordion .card-header a {
+    display: block;
+    cursor: pointer;
+}
+.md-accordion .card-header {
+    padding-left:0rem;
+    margin-bottom: 0;
+}
+#program_sidebar {
+    margin: 10px auto;
+    max-width: 400px;
+}
+
 
 /*********************
  Multiselect CSS
@@ -1620,6 +1741,7 @@ object {
     display: inline-block;
 
 }
+
 .ms-options-wrap,
 .ms-options-wrap * {
     box-sizing: border-box;
@@ -1764,7 +1886,6 @@ object {
 }
 
 
-
 .ms-options-wrap > .ms-options > ul li {
     margin-bottom: 0;
 }
@@ -1884,7 +2005,8 @@ object {
     -o-transform: translateY(-40px);
     transform: translateY(-40px)
 }
-.sidebar .integrity-text:hover .tooltip{
+
+.sidebar .integrity-text:hover .tooltip {
     -webkit-transform: translateY(140px);
     -moz-transform: translateY(140px);
     -ms-transform: translateY(140px);
@@ -1906,19 +2028,19 @@ object {
     text-decoration: none
 }
 
-@media only screen and (min-width:800px) and (max-width:1200px) {
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
     .integrity-text .tooltip {
         min-width: 380px
     }
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width: 800px) {
     .integrity-text .tooltip {
         min-width: 400px
     }
 }
 
-@media only screen and (max-width:580px) {
+@media only screen and (max-width: 580px) {
     .integrity-text .tooltip {
         min-width: 300px;
         left: 0
@@ -1930,7 +2052,7 @@ object {
   *********************/
 
 
-.spicewpsearchform{
+.spicewpsearchform {
     display: block;
     position: absolute;
     right: 0;
@@ -1941,16 +2063,19 @@ object {
     padding: 0px;
 
 }
+
 .spicewpsearchform input[type="text"] {
     width: 78%;
     height: auto;
     padding: 20px;
     border-radius: 0px !important;
 }
-.spicewpsearchform input[type="submit"], #secondary .search{
+
+.spicewpsearchform input[type="submit"], #secondary .search {
     display: none;
 }
-.spicewpsearchform label{
+
+.spicewpsearchform label {
     margin-bottom: 0;
 }
 
@@ -1963,9 +2088,117 @@ object {
     position: relative;
 }
 
-.breadcrumb{
+.breadcrumb {
     background: transparent !important;
+    padding-left: 0;
 }
+
+.breadcrumb a {
+    padding-right: 3px;
+}
+
+.breadcrumb span {
+    padding-left: 3px;
+}
+
+
+/* Slider */
+#textSlider {
+    display: inline-block;
+}
+
+#textSlider div {
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.iamCol {
+    text-align: right;
+    float: left;
+    font-weight: 700;
+    font-size: 2.5em;
+    height: 40pt;
+    line-height: 40pt;
+}
+
+.slideCol {
+    text-align: left;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 2.5em;
+    display: block;
+    white-space: nowrap;
+    padding-left: 10px;
+}
+
+.slideCol p {
+    margin: 0px !important;
+    text-decoration: underline;
+}
+
+.scroller {
+    height: 40pt;
+    line-height: 39pt;
+    overflow: hidden;
+}
+
+.scroller .inner {
+    animation: 10s normal infinite running scroll;
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    #textSlider.row {
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    .iamCol, .slideCol {
+        font-size: 1em !important;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) and (max-width: 765px) {
+    #textSlider.row {
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    .iamCol, .slideCol {
+        font-size: 1.5em !important;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    #textSlider.row {
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    .iamCol, .slideCol {
+        font-size: 1.5em !important;
+    }
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    #textSlider.row {
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    .iamCol, .slideCol {
+        font-size: 1.5em !important;
+    }
+}
+
 
 /*
 if you checked out the link above:
@@ -2066,15 +2299,18 @@ you can add resource intensive styles.
     h1 {
         font-size: 2em;
     }
+
     .hero_text {
         font-size: 34px;
     }
+
     .home .site-header {
         min-height: 550px;
     }
+
     .title-container {
 
-        margin-top: 250px;
+        margin-top: 200px;
     }
 
     .site-header {
@@ -2167,6 +2403,16 @@ you can add resource intensive styles.
     .single-utbildning .title-container {
         margin-top: 150px;
     }
+    #program_sidebar {
+        float: right;
+        width: 30%;
+        max-width: 400px;
+    }
+    .single-utbildning .site-main article {
+        float: left;
+        max-width: 65%;
+    }
+
     .separator {
         flex-grow: 1;
         border-bottom: dotted 2px black;
@@ -2182,13 +2428,14 @@ you can add resource intensive styles.
     .separator-space {
         width: 10px;
     }
+
 }
 
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
 *********************/
-@media only screen and (min-width: 1240px) {
+@media only screen and (min-width: 1200px) {
     /******************************************************************
     Site Name:
     Author:
@@ -2205,6 +2452,10 @@ This is for the larger monitors and possibly full screen viewers.
 
     .carousel-control-prev {
         left: -120px;
+    }
+
+    .site-footer h3 {
+        font-size: 1.4rem;
     }
 
 }

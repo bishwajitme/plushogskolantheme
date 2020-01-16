@@ -10,35 +10,37 @@
  */
 
 ?>
-<!doctype html>
+    <!doctype html>
 <html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <head>
+        <meta charset="<?php bloginfo('charset'); ?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="profile" href="https://gmpg.org/xfn/11">
 
-    <?php wp_head();
+        <?php wp_head();
 
-    if (get_current_blog_id() == 2) {
-        $css_url = get_template_directory_uri() . "/css/ah.css";
-    }
-    if (get_current_blog_id() == 3) {
-        $css_url = get_template_directory_uri() . "/css/vh.css";
-    }
-    if (get_current_blog_id() == 4) {
-        $css_url = get_template_directory_uri() . "/css/th.css";
-    }
-    ?>
-    <link rel='stylesheet' id='sitespecific-style-css' href='<?php echo $css_url; ?>' type='text/css' media='all'/>
-    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6256616/7040012/css/fonts.css" />
-</head>
+        if (get_current_blog_id() == 2) {
+            $css_url = get_template_directory_uri() . "/css/ah.css";
+        }
+        if (get_current_blog_id() == 3) {
+            $css_url = get_template_directory_uri() . "/css/vh.css";
+        }
+        if (get_current_blog_id() == 4) {
+            $css_url = get_template_directory_uri() . "/css/th.css";
+        }
+        ?>
+        <link rel='stylesheet' id='sitespecific-style-css' href='<?php echo $css_url; ?>' type='text/css' media='all'/>
+        <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6256616/7040012/css/fonts.css"/>
+    </head>
 
 <body <?php body_class(); ?>>
 
 <?php if (is_home() || is_front_page() || is_singular('utbildning')) :
     $bgimage = get_field('pageHeroImage')['url'];
     $hero_text = get_field('preambleText');
-    $hero_title = get_field('preambleTitle');
+    $hero_title = get_the_title();
+    $slide_title = get_field('preambleTitle');
+
 
 else:
     $bgimage = get_field('pageHero')[0]['url'];
@@ -105,8 +107,7 @@ if (get_current_blog_id() == 4) {
                 </div><!-- .site-branding -->
 
                 <nav id="site-navigation" class="main-navigation nav navbar-nav navbar-right">
-                    <button class="menu-toggle" aria-controls="primary-menu"
-                            aria-expanded="false"><?php esc_html_e('Meny', 'plushogskolan'); ?></button>
+
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'menu-1',
@@ -121,12 +122,35 @@ if (get_current_blog_id() == 4) {
         <div class="container title-container">
             <h1 class="page-title" itemprop="headline"><?php echo $hero_title; ?></h1>
             <?php if (is_singular('utbildning')) :
-            $metaScope = get_field('metaScope');
-            echo '<p class="header_meta_scope text-white">'.$metaScope.'</p>';
+                $metaScope = get_field('metaScope');
+                echo '<p class="header_meta_scope text-white">' . $metaScope . '</p>';
             endif;
 
-            if (is_home() || is_front_page() || is_singular('utbildning')) : ?>
-                <p class="hero_text text-white"><?php echo $hero_text; ?></p>
+            if (is_singular('utbildning')) : ?>
+                <p class="hero_text text-white mb-4"><?php echo $hero_text; ?></p>
+            <?php endif;
+
+
+            if (is_home() || is_front_page()) : ?>
+                <div id="textSlider" >
+                    <div class="iamCol">
+                        <p><?php echo $slide_title;?></p>
+
+                    </div>
+                    <div class="slideCol">
+                        <div class="scroller">
+                            <div class="inner">
+                                <?php
+                                $resTexts = explode(",", $hero_text);
+                                foreach ($resTexts as &$value) {
+                                   echo '<p>'.$value.'</p>';
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             <?php endif; ?>
 
             <?php // check if the repeater field has rows of data
@@ -138,7 +162,7 @@ if (get_current_blog_id() == 4) {
                         // display a sub field value
                         $link_name = get_sub_field('title');
                         $link_target = get_sub_field('linkUrl');
-                        echo '<a href="'.$link_target.'" class="hero_links btn btn-primary btn-lg m-2">' . $link_name . '</a>';
+                        echo '<a href="' . $link_target . '" class="hero_links btn btn-primary btn-lg m-2">' . $link_name . '</a>';
                     endwhile;
                     echo '</p>';
                 endif;
@@ -149,7 +173,7 @@ if (get_current_blog_id() == 4) {
 
     <div id="content" class="site-content container">
 <?php
-if (!is_front_page()){
+if (!is_front_page()) {
     echo get_hansel_and_gretel_breadcrumbs();
 }
 

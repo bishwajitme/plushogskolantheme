@@ -10,14 +10,14 @@
 get_header();
 ?>
     <div class="row">
-        <div id="primary" class="content-area col-12 col-md-8">
+        <div id="primary" class="content-area col-12">
             <main id="main" class="site-main pr-3">
 
                 <?php
                 while (have_posts()) :
                     the_post();
 
-                    get_template_part('template-parts/content', get_post_type());
+
 
 
                     $meta_start = get_field('metaUtbildningsstart');
@@ -46,8 +46,53 @@ get_header();
 
                 endwhile; // End of the loop.
                 ?>
+                <div id="program_sidebar" class="content-area">
+                    <div class="primary p-4 w-100 text-white">
+                        <h2 class="ps_title pb-2 mb-4 border-bottom">Snabba fakta</h2>
+
+                        <?php if ($metaDeadline != ""): ?>
+                            <p class="kurs_mta"><span
+                                        class="meta_lebel">Sista ansökningsdag</span><span><?php echo $metaDeadline; ?></span>
+                            </p>
+                        <?php endif; ?>
+
+                        <?php if ($utbildningstyp != ""): ?>
+                            <p class="kurs_mta"><span
+                                        class="meta_lebel">Utbildningstyp</span><span><?php echo $utbildningstyp->name; ?></span>
+                            </p>
+                        <?php endif; ?>
+
+                        <?php if ($metaScope != ""): ?>
+                            <p class="kurs_mta"><span
+                                        class="meta_lebel">Utbildningslängd</span><span><?php echo $metaScope; ?></span></p>
+                        <?php endif; ?>
+
+                        <?php if ($metaStudietakt != ""): ?>
+                            <p class="kurs_mta"><span
+                                        class="meta_lebel">Studietakt</span><span><?php echo $metaStudietakt->name; ?></span>
+                            </p>
+                        <?php endif; ?>
+
+                        <?php if ($metaPoints != ""): ?>
+                            <p class="kurs_mta"><span class="meta_lebel">Poäng</span><span><?php echo $metaPoints; ?></span>
+                            </p>
+                        <?php endif; ?>
+
+                        <?php if ($meta_location_text != ""): ?>
+                            <p class="kurs_mta"><span
+                                        class="meta_lebel">Studieort</span><span><?php echo $meta_location_text; ?></span></p>
+                        <?php endif; ?>
+
+                        <?php if ($metaDeadline != ""): ?>
+                            <p class="kurs_mta"><span
+                                        class="meta_lebel">Utbildningsstart</span><span><?php echo $metaStartDate; ?></span></p>
+                        <?php endif; ?>
+
+                    </div>
+                </div>
+                <?php  get_template_part('template-parts/content', get_post_type()); ?>
                 <div class="col-12 pl-0">
-                    <div id="top"></div>
+
                     <!-- Accordians Begins  -->
                     <div id="programa_accordion" class="program_accordion accordion md-accordion">
 
@@ -87,50 +132,7 @@ get_header();
 
             </main><!-- #main -->
         </div><!-- #primary -->
-        <div id="program_sidebar" class="content-area col-12 col-md-4 mt-4">
-            <div class="primary p-4 w-100 text-white">
-                <h2 class="ps_title">Snabba fakta</h2>
 
-                <?php if ($metaDeadline != ""): ?>
-                    <p class="kurs_mta"><span
-                                class="meta_lebel">Sista ansökningsdag</span><span><?php echo $metaDeadline; ?></span>
-                    </p>
-                <?php endif; ?>
-
-                <?php if ($utbildningstyp != ""): ?>
-                    <p class="kurs_mta"><span
-                                class="meta_lebel">Utbildningstyp</span><span><?php echo $utbildningstyp->name; ?></span>
-                    </p>
-                <?php endif; ?>
-
-                <?php if ($metaScope != ""): ?>
-                    <p class="kurs_mta"><span
-                                class="meta_lebel">Utbildningslängd</span><span><?php echo $metaScope; ?></span></p>
-                <?php endif; ?>
-
-                <?php if ($metaStudietakt != ""): ?>
-                    <p class="kurs_mta"><span
-                                class="meta_lebel">Studietakt</span><span><?php echo $metaStudietakt->name; ?></span>
-                    </p>
-                <?php endif; ?>
-
-                <?php if ($metaPoints != ""): ?>
-                    <p class="kurs_mta"><span class="meta_lebel">Poäng</span><span><?php echo $metaPoints; ?></span>
-                    </p>
-                <?php endif; ?>
-
-                <?php if ($meta_location_text != ""): ?>
-                    <p class="kurs_mta"><span
-                                class="meta_lebel">Studieort</span><span><?php echo $meta_location_text; ?></span></p>
-                <?php endif; ?>
-
-                <?php if ($metaDeadline != ""): ?>
-                    <p class="kurs_mta"><span
-                                class="meta_lebel">Utbildningsstart</span><span><?php echo $metaStartDate; ?></span></p>
-                <?php endif; ?>
-
-            </div>
-        </div>
 
     </div><!-- #row -->
     </div><!-- #content -->
@@ -221,6 +223,9 @@ $home_page_id = get_option('page_on_front');
                     if($postType == 'nyhet'){
                         $term_obj_list = get_the_terms($p->ID, 'nyhetstyp');
                         $entityType = join(', ', wp_list_pluck($term_obj_list, 'name'));
+                    }
+                    elseif($postType == 'page'){
+                        $entityType = "Sida";
                     }
                     else{
                         $entityType = $postType;

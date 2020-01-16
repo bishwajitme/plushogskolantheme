@@ -16,7 +16,7 @@ get_header();
                 <?php
                 while (have_posts()) :
                     the_post();
-                    $location_title = get_the_title();
+                    $main_location_title = get_the_title();
                     $contactPhone = get_field("contactPhone");
                     $contactFax = get_field("contactFax");
                     $contactEmail = get_field("contactEmail");
@@ -35,7 +35,7 @@ get_header();
                         <p class="phoneEmail"><?php echo $contactPhone . '<br>' . $contactEmail; ?></p>
                     </div>
                     <div class="image-area col-12 col-md-7">
-                        <img class="studieort_image" alt="<?php echo $location_title; ?>"
+                        <img class="studieort_image" alt="<?php echo $main_location_title; ?>"
                              src="<?php echo $featuredImage['url']; ?>"/>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ get_header();
                 ?>
                 <?php if ($utbildninger): ?>
                     <!-- #row utbilding-->
-                    <h2 class="pt-4 mt-4 pb-3 text-center">Våra utbildningar i <?php echo $location_title; ?></h2>
+                    <h2 class="pt-4 mt-4 pb-3 text-center">Våra utbildningar i <?php echo $main_location_title; ?></h2>
                     <div class="row justify-content-center">
 
                         <?php foreach ($utbildninger as $utbildning): ?>
@@ -156,7 +156,7 @@ get_header();
 
                 <?php
                 if (have_rows('staffCards')): ?>
-                <h2 class="text-center pt-4 mt-4">Vår personal i <?php echo $location_title; ?></h2>
+                <h2 class="text-center pt-4 mt-4">Vår personal i <?php echo $main_location_title; ?></h2>
                 <div class="row">
                     <?php
                     // loop through the rows of data

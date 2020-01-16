@@ -5,7 +5,7 @@ $raknare_background = get_sub_field('raknare_background');
 
 ?>
 
-<section class="part-counters-section pt-4 pb-4 clearfix" style="background:<?php echo $raknare_background; ?>">
+<section class="part-counters-section home-section easyanimator clearfix" style="background:<?php echo $raknare_background; ?>">
 
     <div class="container">
         <div class="row">

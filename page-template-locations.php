@@ -41,7 +41,7 @@ get_header();
                                 $permalink = get_the_permalink()
 
                                 ?>
-                                <div class="event-entry col-lg-4 col-md-6 col-sm-12">
+                                <div class="event-entry col-lg-4 col-md-6 col-sm-12 easyanimator">
                                     <div class="bg-light">
                                         <img src="<?php echo $featuredImage['url']; ?>" class="card-img-top"
                                              alt="<?php echo $title; ?> Featured blid">

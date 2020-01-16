@@ -30,6 +30,9 @@
 .icon-caret-down:before {
   content: "\f0d7";
 }
+.icon-right-quote:before {
+  content: "\e903";
+}
 .icon-arrow-right-alt1:before {
   content: "\e901";
 }

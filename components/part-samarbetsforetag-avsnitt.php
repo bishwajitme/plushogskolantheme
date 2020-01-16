@@ -2,7 +2,7 @@
 
 ?>
 
-<section class="part-samarbetsforetag-avsnitt pt-4 pb-4 mt-4 mb-4 clearfix">
+<section class="part-samarbetsforetag-avsnitt home-section easyanimator clearfix">
     <div class="container">
         <div class="row">
             <div class="appli_process d-flex flex-sm-row flex-column w-100 p-3 align-items-center">
@@ -22,7 +22,7 @@
         </div>
 
         <div class="container">
-            <h2 class="section_title text-left  pt-4 pb-4">Våra samarbetsföretag</h2>
+            <h2 class="section_title text-left  pt-4 pb-4 mb-4">Våra samarbetsföretag</h2>
             <div class="row">
                 <?php
                 if (have_rows('sma_foretag')):

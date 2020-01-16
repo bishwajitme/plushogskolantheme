@@ -12,7 +12,7 @@ get_header();
             <?php echo do_shortcode('[searchandfilter id="9897"]'); ?>
         </div>
         <div id="primary" class="content-area col-12 col-md-9">
-            <main id="main" class="site-main pr-5 pt-4">
+            <main id="main" class="site-main pt-4">
 
                 <?php
                 while (have_posts()) :

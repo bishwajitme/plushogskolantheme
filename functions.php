@@ -135,6 +135,7 @@ function plushogskolan_scripts()
     wp_enqueue_script('plushogskolan-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/inc/bootstrap/js/bootstrap.bundle.min.js', array('jquery'), '23232', true);
     wp_enqueue_script( 'multislect_script', get_stylesheet_directory_uri() . '/js/jquery.multiselect.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script( 'custom_script', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), '1.0', true );
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }

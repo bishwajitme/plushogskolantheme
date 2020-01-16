@@ -67,19 +67,7 @@ dynamic_sidebar('footer-sidebar-4');
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script>
-    jQuery(document).ready(function($) {
-        $('#education_select').multiselect({
-            columns: 1,
-            placeholder: 'Välj utbildning'
-        });
 
-        $(".search_icon").click(function() {
-            $(".spicewpsearchform").slideToggle();
-        });
-
-    });
-</script>
 
 </body>
 </html>

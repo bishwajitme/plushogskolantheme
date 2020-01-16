@@ -72,7 +72,11 @@ get_sidebar();
                     if ($postType == 'nyhet') {
                         $term_obj_list = get_the_terms($p->ID, 'nyhetstyp');
                         $entityType = join(', ', wp_list_pluck($term_obj_list, 'name'));
-                    } else {
+                    }
+                    elseif($postType == 'page'){
+                        $entityType = "Sida";
+                    }
+                    else {
                         $entityType = $postType;
                     }
                     include('components/post-item.php');

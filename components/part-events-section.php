@@ -15,10 +15,10 @@ $args = array(
 $senaste_nyheter = new WP_Query($args);
 ?>
 
-<section class="mot_vara_studentavdelning pt-4 pb-4 mt-4 mb-4 clearfix">
+<section class="mot_vara_studentavdelning pt-4 mt-4 pb-4 mb-4 clearfix">
 
     <div class="container">
-        <h2 class="section_title text-center pt-2 pb-2">Kommande event</h2>
+        <h2 class="section_title text-center pt-2 pb-2 mb-4">Kommande event</h2>
         <div class="row">
 
 
