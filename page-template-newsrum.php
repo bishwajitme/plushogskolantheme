@@ -10,7 +10,7 @@ get_header();
 
     <div class="row">
         <div id="primary" class="content-area col-12">
-            <main id="main" class="site-main pr-5">
+            <main id="main" class="site-main newsroom_content">
 
                 <?php
                 while (have_posts()) :
@@ -28,7 +28,7 @@ get_header();
 
     </div><!-- #row -->
     </div><!-- #content -->
-    <div class="extra-content news_filterin_section">
+    <div class="extra-content news_filterin_section mt-5 mb-5">
 <?php
 echo get_field('form_code');
 ?>

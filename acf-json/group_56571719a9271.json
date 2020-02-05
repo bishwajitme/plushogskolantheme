@@ -1,0 +1,139 @@
+{
+    "key": "group_56571719a9271",
+    "title": "SEO",
+    "fields": [
+        {
+            "key": "field_565717550fa6e",
+            "label": "Titel",
+            "name": "meta_tag_title",
+            "type": "text",
+            "instructions": "Ange titeln som ska synas i sökmotorer. Standardvärde är \"%title% \"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_565c474618bac",
+            "label": "Beskrivning",
+            "name": "meta_tag_description",
+            "type": "textarea",
+            "instructions": "Ge den här sidan en beskrivning som syns i sökmotorer. Standardvärde %description%",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 220,
+            "rows": 4,
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_566aa33423e73",
+            "label": "Bild",
+            "name": "meta_tag_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_565f01e01d43f",
+            "label": "Canonical URL",
+            "name": "meta_tag_canonical_url",
+            "type": "url",
+            "instructions": "Använd endast om en annan sida innehåller snarlikt innehåll. Annars lämna detta fält tomt.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_565d66b7ab353",
+            "label": "Instruktioner",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Variablerna %title% och %description% kan användas för att spegla sidans titel respektive sidans utdrag. \r\n\r\nLämnas fälten tomma kommer standardvärde för post-typen genereras. Dessa ändras i \"Globala inställningar\".\r\n\r\nOBS, \"Sidor\" har inget utdrag. Det är därför viktigt att ge varje post i \"Sidor\" en unik beskrivning.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "nyhet"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "studieort"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "utbildning"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1579609367
+}

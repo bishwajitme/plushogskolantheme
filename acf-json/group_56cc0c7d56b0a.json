@@ -1,0 +1,76 @@
+{
+    "key": "group_56cc0c7d56b0a",
+    "title": "Välj sidtyp",
+    "fields": [
+        {
+            "key": "field_56cc0c84c2f1d",
+            "label": "Välj sidtyp",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "För att fylla i innehåll på denna sida måste du först välja en sidtyp.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "sidtyp:artikelsida"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "sidtyp:landningssida"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "sidtyp:listsida"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "sidtyp:pressida"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1579609290
+}

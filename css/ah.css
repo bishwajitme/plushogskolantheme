@@ -1,14 +1,24 @@
 .navbar, .main-navigation ul ul{
-    background:rgba(0, 103, 127, .7);
+    background:rgba(0, 103, 127, .95);
     z-index: 9999;
 }
- .site-footer, .site-header, .part-vittnesmal-section, .ff-label-wrapper.custom, #search-filter-form-9890, .siteBg, .primary{
+ .site-footer, .site-header, .part-vittnesmal-section, .ff-label-wrapper.custom, #search-filter-form-9890, .siteBg,
+ .primary, .ej_sokbarbox .arrow_right_container, .sidebar_menu li.current-menu-item::before{
     background-color:#00677f;
 }
-.icon_container span.iconimg{
+.siteBg.secondary:after {
+    background: linear-gradient(180deg, #f8004e 0, #c5003e);
+
+}
+.siteBg.primary:after {
+    background: linear-gradient(180deg,
+#62a1b4 0,
+    #00677f);
+}
+.icon_container{
     background:rgba(0, 103, 127, .7); 
 }
-.btn-primary {
+.btn-primary, .float_ansok_button {
     background-color:#c5003e;
     border-color:#c5003e;
     color: #fff !important;
@@ -16,6 +26,12 @@
 .btn-primary:hover {
     background-color:#ac0036;
     border-color:#ac0036;
+}
+.content-area ul li::before{
+  background-color:#c5003e;
+}
+.content-area ol li::before, blockquote p:first-child::before{
+ color:#c5003e;
 }
 .bg-light {
     background:#f2f2f2 !important;
@@ -32,8 +48,11 @@
      background-color: rgba(197, 0, 62,.15);
      color: #fff;
  }
-.md-accordion .card-header {
+.md-accordion .card-header, .ej_sokbarbox {
     border-bottom: 1px solid rgba(0, 103, 127,.4);
+}
+.ej_sokbarbox{
+    border-top: 1px solid rgba(0, 103, 127,.4);;
 }
 
 .class_certi:hover {
@@ -61,8 +80,11 @@
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a, .site-content a:hover, .entry-content h1,  .entry-content h2, .entry-content h3, .entry-content h4, .ico-class, .md-accordion .card-header a {
+a, .site-content a:hover, .entry-content h1,  .entry-content h2, .entry-content h3, .entry-content h4, .ico-class, .md-accordion .card-header a, .page-title-single {
 	color: #00677f;
+}
+a:hover{
+    color: #62a1b4;
 }
 
 /*--------------------------------------------------------------

@@ -1,3 +1,119 @@
-.navbar.navbar-default.container{
-    background: red;
+.navbar, .main-navigation ul ul{
+    background:rgba(0, 89, 79, .95);
+    z-index: 9999;
+}
+ .site-footer, .site-header, .part-vittnesmal-section, .ff-label-wrapper.custom, #search-filter-form-10836, .siteBg,
+ .primary, .ej_sokbarbox .arrow_right_container, .sidebar_menu li.current-menu-item::before{
+    background-color:#00594f;
+}
+.siteBg.secondary:after {
+    background: linear-gradient(180deg, #f8004e 0, #c5003e);
+
+}
+.siteBg.primary:after {
+    background: linear-gradient(180deg,
+#62a1b4 0,
+    #00594f);
+}
+.icon_container span.iconimg{
+    background:rgba(0, 89, 79, .7); 
+}
+.btn-primary, .float_ansok_button  {
+    background-color:#ed8b00;
+    border-color:#ed8b00;
+    color: #fff !important;
+}
+.btn-primary:hover {
+    background-color:#ed8b00;
+    border-color:#ed8b00;
+}
+
+.content-area ul li::before{
+  background-color:#ed8b00;
+}
+.content-area ol li::before, blockquote p:first-child::before{
+ color:#ed8b00;
+}
+
+
+.bg-light {
+    background:#f2f2f2 !important;
+    
+}
+.header_overlay {
+    background: rgba(0, 89, 79,.5);
+}
+.spicewpsearchform{
+    border: 5px solid rgb(0, 89, 79);
+}
+
+.class_kurs:hover {
+     background-color: rgba(237, 139, 0,.17);
+        color: #fff;
+ }
+.md-accordion .card-header, .ej_sokbarbox {
+    border-bottom: 1px solid rgba(0, 89, 79,.4);
+}
+.ej_sokbarbox{
+    border-top: 1px solid rgba(0, 89, 79,.4);;
+}
+
+.class_certi:hover {
+    background-color: rgba(0, 133, 120,.18);
+ }
+
+.class_yh {
+    background: #f2f2f2;
+}
+.class_yh:hover {
+      background-color: rgba(0, 89, 79,.22);
+ }
+
+
+.certifiering{
+   background-color: rgb(0, 133, 120);
+}
+.kurs{
+   background-color: rgb(237, 139, 0);
+}
+
+
+
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a, .site-content a:hover, .entry-content h1,  .entry-content h2, .entry-content h3, .entry-content h4, .ico-class, .md-accordion .card-header a, .page-title-single {
+	color: #00594f;
+}
+a:hover{
+   color: rgba(0, 89, 79,.8);  
+}
+
+/*--------------------------------------------------------------
+## fonts
+--------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Gotham SSm 7r", "Gotham SSm A", "Gotham SSm B";
+    font-style: normal;
+    font-weight: 700;
+}
+@keyframes scroll {
+    0%  	{margin-top: 0px;}
+    10% 	{margin-top: 0px;}
+
+    20%  {margin-top: -40pt;}
+    30%  {margin-top: -40pt;}
+
+    40%  {margin-top: -80pt;}
+    50%  {margin-top: -80pt;}
+
+    60%  {margin-top: -120pt;}
+    70%  {margin-top: -120pt;}
+
+    80%  {margin-top: -160pt;}
+    90%  {margin-top: -160pt;}
+
+    100% {margin-top: 0px;}
 }

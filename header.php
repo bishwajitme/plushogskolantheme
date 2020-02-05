@@ -120,7 +120,10 @@ if (get_current_blog_id() == 4) {
 
 
         <div class="container title-container">
-            <h1 class="page-title" itemprop="headline"><?php echo $hero_title; ?></h1>
+            <?php if(!is_singular( 'nyhet' )):?>
+             <h1 class="page-title" itemprop="headline"><?php echo $hero_title; ?></h1>
+            <?php endif; ?>
+           
             <?php if (is_singular('utbildning')) :
                 $metaScope = get_field('metaScope');
                 echo '<p class="header_meta_scope text-white">' . $metaScope . '</p>';
@@ -156,7 +159,7 @@ if (get_current_blog_id() == 4) {
             <?php // check if the repeater field has rows of data
             if (!is_search()) {
                 if (have_rows('preambleLinks')):
-                    echo '<p class="links_container">';
+                    echo '<p class="links_container home-desktop">';
                     // loop through the rows of data
                     while (have_rows('preambleLinks')) : the_row();
                         // display a sub field value
@@ -169,7 +172,8 @@ if (get_current_blog_id() == 4) {
             }
             ?>
         </div>
-    </header><!-- #masthead -->
+    </header><!-- #masthead --> 
+    <div class="search d-block d-sm-block d-md-none mobile-search"><a class="search_icon"><i class="icon-search"></i></a><div style="display:none;" class="spicewpsearchform"><?php echo get_search_form(false); ?></div></div>
 
     <div id="content" class="site-content container">
 <?php
@@ -178,3 +182,18 @@ if (!is_front_page()) {
 }
 
 ?>
+ <?php // check if the repeater field has rows of data
+            if (is_front_page()) {
+                if (have_rows('preambleLinks')):
+                    echo '<p class="links_container home-mobile d-md-block d-lg-none text-center">';
+                    // loop through the rows of data
+                    while (have_rows('preambleLinks')) : the_row();
+                        // display a sub field value
+                        $link_name = get_sub_field('title');
+                        $link_target = get_sub_field('linkUrl');
+                        echo '<a href="' . $link_target . '" class="hero_links btn btn-primary btn-lg m-2">' . $link_name . '</a>';
+                    endwhile;
+                    echo '</p>';
+                endif;
+            }
+            ?>

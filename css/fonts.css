@@ -45,6 +45,10 @@
 .icon-arrow-right2:before {
   content: "\ea3c";
 }
+.icon-linkedin:before {
+  content: "\eac9";
+}
+  
 .icon-search:before {
   content: "\f002";
 }

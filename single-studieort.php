@@ -28,18 +28,15 @@ get_header();
 
                 endwhile; // End of the loop.
                 ?>
-                <br class="clearfix">
-                <div class="row">
-                    <div class="address-area col-12 col-md-5">
+                <div id="studieorter_sidebar" class="content-area mt-5">
+                    <div class="primary p-4 w-100 text-white">
+                         <h3 class="ps_title pb-2 mb-4 border-bottom">Adress</h3>
                         <p class="address"><?php echo $contactAddress; ?></p>
                         <p class="phoneEmail"><?php echo $contactPhone . '<br>' . $contactEmail; ?></p>
                     </div>
-                    <div class="image-area col-12 col-md-7">
-                        <img class="studieort_image" alt="<?php echo $main_location_title; ?>"
-                             src="<?php echo $featuredImage['url']; ?>"/>
                     </div>
-                </div>
                 <br class="clearfix">
+               
                 <!--
                ================================
                  connected programs start
@@ -111,6 +108,7 @@ get_header();
 
                             <div class="utbildning-entry col-lg-4 col-md-4 col-sm-12">
                                 <div class="bg-light <?php echo $utbildningClass; ?>">
+                                    <a href="<?php echo $permalink; ?>" title="<?php echo $title; ?> link" class="full_box_link"></a>
                                     <div class="p-3 utbildning-entry-text">
                                         <h6 class="ff-label-wrapper custom"><?php echo $utbildningstypText; ?></h6>
                                         <h3 class="utbildning_title card-title mt-4"><a href="<?php echo $permalink; ?>"
@@ -151,12 +149,56 @@ get_header();
                     connected programs end
                 ===============================================================
 
-                   *********** Staff Section Start ***************************
-                -->
+
+                       *********** LINk Section Start ***************************
+                    -->
+
+                    <?php
+                    if (have_rows('infoBlocks')) :
+
+                        while (have_rows('infoBlocks')) : the_row();
+
+                            if (get_row_layout() == 'internalLink' || get_row_layout() == 'externalLink') :
+                                $link_title = get_sub_field('title');
+                                $link_excerpt = get_sub_field('excerpt');
+                                $link_linkUrl = get_sub_field('linkUrl');
+                                $link_image = get_sub_field('image');
+                                $link_color = get_sub_field('color'); ?>
+
+                                <div class="row">
+                                    <div class="col-lg-12 col-12 p-4 mt-5 mb-3 text-white siteBg <?php echo $link_color; ?>">
+                                        <a href="<?php echo $link_linkUrl; ?>" title="<?php echo $title; ?> link" class="full_box_link"></a>
+                                        <div class="content-wrap p-4 text-white">
+                                        <a href="<?php echo $link_linkUrl; ?>" title="<?php echo $link_title; ?> link">
+                                            <h4 class="nyheter_title card-title text-white"><?php echo $link_title; ?></h4>
+                                        </a>
+                                        <p><?php echo $link_excerpt; ?></p>
+                                        <a href="<?php echo $link_linkUrl; ?>" title="<?php echo $link_title; ?> link"
+                                           class="arrow_right_container"><span class="icon-arrow-right2"></span></a>
+                                    </div>
+                                </div>
+                                 </div>
+
+
+                            <?php
+                            endif;
+
+                        endwhile;
+                    endif;
+                    ?>
+
+                     <!--
+
+                    ===============================================================
+                       LINk Section end
+                    ===============================================================
+
+                       *********** Staff section Start ***************************
+                    -->
 
                 <?php
                 if (have_rows('staffCards')): ?>
-                <h2 class="text-center pt-4 mt-4">Vår personal i <?php echo $main_location_title; ?></h2>
+                <h2 class="text-center pt-4 mt-5">Vår personal i <?php echo $main_location_title; ?></h2>
                 <div class="row">
                     <?php
                     // loop through the rows of data
@@ -178,7 +220,12 @@ get_header();
                                      alt="<?php echo $stname; ?>  blid">
                                 <div class="p-3 event-entry-text">
                                     <h4 class="nyheter_title card-title"><?php echo $stname; ?></h4>
-                                    <p class="card-text"><?php echo $stworkTitle . '<br>' . $stemail . '<br>' . $stphone . '<br>' . $stworkDescription; ?></p>
+                                    <p class="card-text">
+                                        <?php echo $stworkTitle . '<br>';
+                                         if($stemail!=""){
+                                                echo '<a href="'.$stemail.'">'.$stemail.'</a>';
+                                         } 
+                                          echo '<br>' . $stphone . '<br>' . $stworkDescription; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -193,46 +240,8 @@ get_header();
 
                     endif;
                     ?>
-                    <!--
-
-                    ===============================================================
-                        Staff Section
-                    ===============================================================
-
-                       *********** LINk Section Start ***************************
-                    -->
-
-                    <?php
-                    if (have_rows('infoBlocks')) :
-
-                        while (have_rows('infoBlocks')) : the_row();
-
-                            if (get_row_layout() == 'internalLink' || get_row_layout() == 'externalLink') :
-                                $link_title = get_sub_field('title');
-                                $link_excerpt = get_sub_field('excerpt');
-                                $link_linkUrl = get_sub_field('linkUrl');
-                                $link_image = get_sub_field('image');
-                                $link_color = get_sub_field('color'); ?>
-
-                                <div class="row">
-                                    <div class="col-lg-12 col-12 p-4 mt-4 mb-4 text-white siteBg <?php echo $link_color; ?>">
-                                        <a href="<?php echo $link_linkUrl; ?>" title="<?php echo $link_title; ?> link">
-                                            <h4 class="nyheter_title card-title text-white"><?php echo $link_title; ?></h4>
-                                        </a>
-                                        <p><?php echo $link_excerpt; ?></p>
-                                        <a href="<?php echo $link_linkUrl; ?>" title="<?php echo $link_title; ?> link"
-                                           class="arrow_right_container"><span class="icon-arrow-right2"></span></a>
-                                    </div>
-                                </div>
-
-
-                            <?php
-                            endif;
-
-                        endwhile;
-                    endif;
-                    ?>
-
+           
+              <div class="p-3 m-3"></div>
 
             </main><!-- #main -->
         </div><!-- #primary -->

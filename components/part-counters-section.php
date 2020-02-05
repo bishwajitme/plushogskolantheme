@@ -5,7 +5,7 @@ $raknare_background = get_sub_field('raknare_background');
 
 ?>
 
-<section class="part-counters-section home-section easyanimator clearfix" style="background:<?php echo $raknare_background; ?>">
+<section class="part-counters-section counters-part home-section easyanimator clearfix" style="background:<?php echo $raknare_background; ?>">
 
     <div class="container">
         <div class="row">
@@ -25,9 +25,9 @@ $raknare_background = get_sub_field('raknare_background');
                     <div class="text-white counters-entry col-lg-4 col-md-4 col-sm-12 col-xs-12 p-4 border-right">
 
                         <h3><span class="timer count-title count-number" data-to="<?php echo $raknare_number; ?>"
-                                  data-speed="2500"></span><span><?php echo $raknare_sufix ?></span></h3>
+                                  data-speed="2500">raknare_number</span><span><?php echo $raknare_sufix ?></span></h3>
                         <h3><?php echo $raknare_title; ?></h3>
-                        <p class="count-text pt-3 pb-3 pr-3"><?php echo $raknare_description; ?></p>
+                        <div class="count-text pt-3 pb-3 pr-3"><?php echo $raknare_description; ?></div>
                     </div>
 
 
@@ -126,7 +126,7 @@ $raknare_background = get_sub_field('raknare_background');
         }
     }(jQuery));
 
-    jQuery(function ($) {
+     jQuery(function ($) {
         // custom formatting example
         $('.count-number').data('countToOptions', {
             formatter: function (value, options) {
@@ -135,7 +135,18 @@ $raknare_background = get_sub_field('raknare_background');
         });
 
         // start all the timers
-        $('.timer').each(count);
+        //$('.timer').each(count);
+
+        jQuery(window).scroll(function(event) {
+            jQuery(".part-counters-section.come-in").each(function(i, el) {
+                var el = jQuery(el);
+                if (el.visible(true)) {
+                    jQuery('.timer').each(count);
+                    el.removeClass('part-counters-section');
+                }
+            });
+        });
+
 
         function count(options) {
             var $this = $(this);

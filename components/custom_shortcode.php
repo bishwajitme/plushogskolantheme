@@ -49,8 +49,19 @@ function ec_interest_form_shortcode($atts)
     ), $atts));
 
     $form_title = $atts['form_title'];
+    $blog_id = get_current_blog_id();
+    if($blog_id == 2){
+        $ApiKey = 'F71C22F2-48DD-4138-8E86-4E299C61F145';
+    }
+    if($blog_id == 3){
+        $ApiKey = '5ED87713-B5E0-4B09-8630-CD6D550C5468';
+    }
+    if($blog_id == 4){
+        $ApiKey = 'F1D6D6D8-ECC3-4E02-BB46-54111EB52206';
+    }
 
-    $file = "https://www.emg-srs.com/api/v1.0/educationtree/?ApiKey=F71C22F2-48DD-4138-8E86-4E299C61F145";
+
+    $file = "https://www.emg-srs.com/api/v1.0/educationtree/?ApiKey=".$ApiKey;
     $data = file_get_contents($file);
     $result = json_decode($data, true);
 //print_r($result);
@@ -81,14 +92,14 @@ function ec_interest_form_shortcode($atts)
     }
 
     $output .= '	</select>';
-    $output .= '<div class="extra_field"><span class="consent_text"><label for="input_consent" class="ax-hidden">personuppgifter Samtycke</label>	<input type="checkbox" class="consent" id="input_consent" name="consent" required> Jag samtycker till att mina personuppgifter samlas in och behandlas för att kunna ta emot riktad information och marknadsföring.  <span class="integrity-text"> Läs hela vår personuppgiftspolicy <u>här</u><br /> 
+    $output .= '<div class="extra_field"><span class="consent_text"><label for="input_consent" class="ax-hidden">personuppgifter Samtycke</label>	<input type="checkbox" class="consent" id="input_consent" name="consent" required> Jag samtycker till att mina personuppgifter samlas in och behandlas för att kunna ta emot riktad information och marknadsföring.  Läs hela vår personuppgiftspolicy <span class="integrity-text"><u>här</u><br /> 
                 <div class="tooltip">
                   <strong>Hantering av personuppgifter</strong><br />När du skickar in en intresseanmälan till oss behöver du lämna ditt samtycke till att vi behandlar dina personuppgifter för att vi ska kunna registrera din ansökan. De personuppgifter som vi behandlar om dig är ditt namn, din e-postadress, 
                   ditt telefonnummer, programmet/programmen du är intresserad av samt när du börjar gymnasiet. Vi behandlar dessa uppgifter om dig i ett IT-system som används av alla bolag inom AcadeMedia-koncernen.<br />Om du samtycker till att ta emot marknadsföring och information från våra skolor kommer vi även att behandla dina personuppgifter för detta ändamål. Utöver vad som framgår ovan kan vi komma att lagra trafiken i syfte att förbättra webbplatsen, samt för att efterkomma anmodan från myndighet eller att upptäcka och förebygga olagliga aktiviteter.
                   <br />Huvudmannen är personuppgiftsansvarige på den skola du går på. Vi tillämpar gällande integritetslagstiftning vid behandling av personuppgifter. Uppgifterna lagras i ett år efter att ansökningsperioden är över för den sökta utbildningen. Vi använder oss av automatiserat individuellt beslutsfattande och profilering när vi skickar ut marknadsföring och annan information till dig.<br />Du kan när som helst återkalla ditt samtycke. 
                   Du når våra dataskyddsombud <a href="https://trygg.academedia.se/kontakt/">här</a>. Du hittar mer information på <a href="https://trygg.academedia.se/">trygg.academedia.se</a>. Om du vill ta emot marknadsföring, information och påminnelser från våra skolor, bocka i rutan nedan.
                 </div>
-              </span>
+              </span></span>
 					<input type="submit" value="Skicka intresseanmälan" class="srs-submit btn-primary"></div>
 				</form>';
     wp_reset_postdata();

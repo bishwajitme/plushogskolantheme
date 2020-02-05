@@ -26,7 +26,7 @@ $vittnesmal_background = get_sub_field('background_image');
                             <div class="carousel-item text-white text-left <?php echo $slide_class; ?>">
                                 <div class="row">
                                     <div class="col-lg-3 col-md-4 col-sm-12">
-                                        <img src="<?php echo $vittnesmal_blid['url']; ?>" class="img-fluid"
+                                        <img src="<?php echo $vittnesmal_blid['url']; ?>" class="img-fluid mx-auto d-block"
                                              alt="vittnesmal blid">
                                     </div>
                                     <div class="col-lg-9 col-md-8 col-sm-12">

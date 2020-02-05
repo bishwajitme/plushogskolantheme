@@ -240,3 +240,23 @@ function add_search_form($items, $args) {
 // custom shortcode added
 
 include('components/custom_shortcode.php' );
+
+//added ACF option page
+
+add_action('acf/init', 'my_acf_op_init');
+
+   function my_acf_op_init() {
+
+    // Check function exists.
+    if( function_exists('acf_add_options_page') ) {
+        acf_add_options_page(array(
+                'page_title'    => 'Options',
+                'menu_title'    => 'Global settings',
+                'menu_slug'     => 'global-settings',
+                'capability'    => 'edit_posts',
+                'redirect'  => false
+        ));
+      }
+}
+
+

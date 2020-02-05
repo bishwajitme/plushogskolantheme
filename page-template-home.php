@@ -10,7 +10,7 @@ get_header();
 
     <div class="row">
         <div id="primary" class="content-area col-12 col-md-8">
-            <main id="main" class="site-main pr-5">
+         
 
                 <?php
                 while (have_posts()) :
@@ -27,7 +27,7 @@ get_header();
                 ?>
 
 
-            </main><!-- #main -->
+  
 
         </div><!-- #primary -->
 
@@ -35,6 +35,7 @@ get_header();
     </div><!-- #row -->
     </div><!-- #content -->
     <div class="extra-content">
+         <main id="homemain">
 <?php
 if (have_rows('page_content_flex')) :
 
@@ -77,4 +78,5 @@ if (have_rows('page_content_flex')) :
     endwhile;
 endif;
 ?>
+ </main><!-- #main -->
 <?php get_footer();

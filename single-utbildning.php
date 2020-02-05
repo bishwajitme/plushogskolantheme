@@ -28,6 +28,8 @@ get_header();
                     $metaDeadline = get_field('metaDeadline');
                     $metaPoints = get_field('metaPoints');
                     $meta_location = get_field('metaLocation');
+                    $yh_apply_link = get_field('yh_apply_link');
+              
                     // $meta_locationText = get_field('metaLocationText');
                     if ($meta_location):
                         $meta_location_count = count($meta_location);
@@ -38,7 +40,7 @@ get_header();
                             $meta_location_text = $meta_location_text . $location_title;
 
                             if ($counter < $meta_location_count) {
-                                $meta_location_text = $meta_location_text . ',';
+                                $meta_location_text = $meta_location_text . ', ';
                             }
                             $counter++;
                         endforeach;
@@ -46,9 +48,13 @@ get_header();
 
                 endwhile; // End of the loop.
                 ?>
+                <?php if($yh_apply_link != ""):?>
+                <a href="<?php echo $yh_apply_link; ?>" target="_blank" class="float_ansok_button">Ansök Nu</a>
+                <?php endif;?>
+
                 <div id="program_sidebar" class="content-area">
                     <div class="primary p-4 w-100 text-white">
-                        <h2 class="ps_title pb-2 mb-4 border-bottom">Snabba fakta</h2>
+                        <h3 class="ps_title pb-2 mb-4 border-bottom">Snabba fakta</h3>
 
                         <?php if ($metaDeadline != ""): ?>
                             <p class="kurs_mta"><span
@@ -91,10 +97,12 @@ get_header();
                     </div>
                 </div>
                 <?php  get_template_part('template-parts/content', get_post_type()); ?>
+                 <div class="p-3 m-3 clearfix"></div>
                 <div class="col-12 pl-0">
 
                     <!-- Accordians Begins  -->
-                    <div id="programa_accordion" class="program_accordion accordion md-accordion">
+                    <div id="programa_accordion" class="program_accordion accordion md-accordion mb-5">
+
 
                         <?php $Informationsflikar = get_field('tabList');
 
@@ -148,41 +156,37 @@ $home_page_id = get_option('page_on_front');
 
 ?>
 
-    <div class="extra-content primary mt-4 mb-4 pt-4 pb-4">
+    <div class="extra-content primary mt-4 mb-5 pt-5 pb-5">
         <div class="container">
             <div class="row">
                 <div class="why-brand col-12 col-md-6">
-                    <div class="aspekter-entry col-12">
-                        <p class="text-white aspekter_text"><span class="tick_marker_bg" aria-hidden="true">
-                            <span class="icon-checkmark"></span> </span> 93% av våra studerande får jobb efter examen.
-                        </p>
-                    </div>
+                 <?php
+                    if (have_rows('program_important_aspects')):
 
-                    <div class="aspekter-entry col-12">
-                        <p class="text-white aspekter_text"><span class="tick_marker_bg" aria-hidden="true"><span
-                                        class="icon-checkmark"></span> </span> Utbildningar som ger dig praktisk
-                            erfarenhet.
-                        </p>
-                    </div>
+                        // loop through the rows of data
+                        while (have_rows('program_important_aspects')): the_row();
+                            // display a sub field value
+                            $program_important_aspect = get_sub_field('program_important_aspect');
+                            ?>
 
+                            <div class="aspekter-entry easyanimator col-12">
 
-                    <div class="aspekter-entry col-12">
+                                <p class="text-white aspekter_text"><span class="tick_marker_bg" aria-hidden="true"><span
+                                                class="icon-checkmark"></span> </span> <?php echo $program_important_aspect; ?>
+                                </p>
 
-                        <p class="text-white aspekter_text"><span class="tick_marker_bg" aria-hidden="true"><span
-                                        class="icon-checkmark"></span> </span> Vi har ett nära samarbete med branschen
-                            för
-                            att kunna erbjuda pricksäkra utbildningar. </p>
-
-                    </div>
+                            </div>
 
 
-                    <div class="aspekter-entry col-12">
+                        <?php
+                        endwhile;
 
-                        <p class="text-white aspekter_text"><span class="tick_marker_bg" aria-hidden="true"><span
-                                        class="icon-checkmark"></span> </span> Vi skräddarsyr utbildningar utifrån ditt
-                            företags behov av kompetensutveckling. </p>
+                    else:
 
-                    </div>
+                        // no rows found
+
+                    endif;
+                    ?>
 
 
                 </div>
@@ -203,7 +207,7 @@ $home_page_id = get_option('page_on_front');
      Relaterat section
      ==============================*************===========================
      -->
-    <div class="extra-content  mt-4 mb-4 pt-4 pb-4">
+    <div class="extra-content  mt-4 mb-5 pt-4 pb-4">
     <div class="container">
         <div class="row">
 

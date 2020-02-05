@@ -16,10 +16,10 @@ $mv_studentavdelning_image = get_sub_field('mv_studentavdelning_image');
                                                 src="<?php echo $mv_studentavdelning_image['url'] ?>"
                                                 alt="Studentavdelning Blid"/></p>
             </div>
-            <div class="aspekter-entry col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2">
-                <h2 class="section_title text-left pt-2 pb-2">Möt våra studerande</h2>
+            <div class="aspekter-entry col-lg-6 col-md-6 col-sm-12 col-xs-12 p-4">
+                <h2 class="section_title text-left pt-2 pb-2">Möt våra studerande</h2>
                 <p class="text-white aspekter_text"><?php echo $studentavdelning_text; ?></p>
-                <p class="las-mer"><a href="/nyheter?_sft_nyhetstyp=intervju" title=">Läs alla våra intervjuer">Läs alla våra intervjuer
+                <p class="las-mer"><a href="/nyheter?_sft_nyhetstyp=intervju" title="Läs alla våra intervjuer">Läs alla våra intervjuer
                         >></a></p>
 
             </div>
