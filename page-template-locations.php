@@ -35,12 +35,13 @@ get_header();
             </div>
         </div>
     </div>
-    <h3 class="location_title text-center mt-5 pt-4 pb-2">Här finns vi</h3>
+    
     <?php
     $args = array(
      'post_type' => 'studieort',
      'orderby' => 'title',
      'order'   => 'ASC',
+     'posts_per_page' => -1,
 
  );
     $studieorter = new WP_Query($args);

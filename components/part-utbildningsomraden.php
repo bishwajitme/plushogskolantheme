@@ -39,11 +39,13 @@ $alla_utbildningar_blid = get_sub_field('alla_utbildningar_blid');
                       <img src="<?php echo esc_url($amne_image['url']); ?>" class="img-responsive"
                       alt="<?php echo $amne_title; ?>">
                       <div class="overlay">
+                        <div class="overlay_content_wrapper">
                         <h2 class="text-white"><a  href="<?php echo $amne_link; ?>"
                           title="gå till <?php echo $amne_title; ?>"><?php echo $amne_title; ?></a></h2>
                           <p><a class="info" href="<?php echo $amne_link; ?>"
                               title="gå till <?php echo $amne_title; ?>">Läs mer</a></p>
                           </div>
+                        </div>
                       </div>
                   </div>
 
@@ -64,10 +66,12 @@ $alla_utbildningar_blid = get_sub_field('alla_utbildningar_blid');
                 <img src="<?php echo esc_url($alla_utbildningar_blid['url']); ?>" class="img-responsive"
                 alt="Alla utbildningar">
                 <div class="overlay">
+                  <div class="overlay_content_wrapper">
                     <h2 class="text-white"><a href="/utbildningar/"
                       title="gå till Alla utbildningar">Alla utbildningar</a></h2>
                       <p>Här hittar du hela utbildningsutbudet.</p>
                      </div>
+                 </div>
                  </div>
              </div>
 

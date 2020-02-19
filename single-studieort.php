@@ -57,7 +57,7 @@ get_header();
                 ?>
                 <?php if ($utbildninger): ?>
                     <!-- #row utbilding-->
-                    <h2 class="pt-4 mt-4 pb-3 text-center">Våra utbildningar i <?php echo $main_location_title; ?></h2>
+                    <h2 class="pt-4 mt-4 pb-3 text-center">Våra utbildningar i <?php echo $main_location_title; ?></h2>
                     <div class="row justify-content-center">
 
                         <?php foreach ($utbildninger as $utbildning): ?>

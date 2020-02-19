@@ -89,7 +89,7 @@ if ($query->have_posts()) {
                             <a href="<?php echo $permalink; ?>" title="<?php echo $title; ?> link" class="full_box_link"></a>
                             <div class="p-3 utbildning-entry-text">
                                 <h6 class="ff-label-wrapper custom"><?php echo $utbildningstypText; ?></h6>
-                                <h3 class="utbildning_title card-title mt-4 mb-4"><a href="<?php echo $permalink; ?>"
+                                <h3 class="utbildning_title card-title pt-2 mt-4 mb-4"><a href="<?php echo $permalink; ?>"
                                                                                 title="<?php echo $title; ?> link"><?php echo $title; ?></a>
                                 </h3>
                                 <p class="program_meta"><span class="ico-class icon-location"></span>

@@ -39,9 +39,10 @@
             "post_type": [
                 "nyhet",
                 "studieort",
-                "utbildning"
+                "utbildning",
+                "page"
             ],
-            "taxonomy": [],
+            "taxonomy": "",
             "filters": [
                 "search",
                 "post_type",
@@ -96,5 +97,5 @@
     ],
     "active": 1,
     "description": "- Landningssior, Utbildningar",
-    "modified": 1579609362
+    "modified": 1581082470
 }

@@ -51,16 +51,16 @@
 				<div class="social_icons_rounded">
 					<ul>
 						<?php if($twitter_url): ?>
-							<li><a href="<?php echo $twitter_url;?>" title="Youtube Link"><span class="icon-youtube-square"></span></a></li>
+							<li><a href="<?php echo $twitter_url;?>" title="Youtube Link" target="_blank"><span class="icon-youtube-square"></span></a></li>
 						<?php endif;
 						if($facebook_url): ?>
-							<li>  <a href="<?php echo $facebook_url;?>" title="Facebook Link"><span class="icon-facebook-square"></span></a></li>
+							<li>  <a href="<?php echo $facebook_url;?>" title="Facebook Link" target="_blank"><span class="icon-facebook-square"></span></a></li>
 						<?php endif;
 						if($linkedin_url): ?>
-							<li> <a href="<?php echo $linkedin_url;?>"> <span class="icon-linkedin" title="Linkedin Link"></span></a></li>
+							<li> <a href="<?php echo $linkedin_url;?>" title="Linkedin Link" target="_blank"> <span class="icon-linkedin" title="Linkedin Link"></span></a></li>
 						<?php endif;
 						if($instagram_url): ?>
-							<li><a href="<?php echo $instagram_url;?>" title="Instagram Link"><span class="icon-instagram"></span></a></li>
+							<li><a href="<?php echo $instagram_url;?>" title="Instagram Link" target="_blank"><span class="icon-instagram"></span></a></li>
 						<?php endif; ?>
 						</ul>
 					</div>
@@ -71,13 +71,14 @@
 			</div>
 			<div class="site-info footer-copyright text-center py-3">
 				<?php
-				if(get_current_blog_id()==2){
+				$blog_id = get_current_blog_id();
+				if($blog_id == 2){
 					$logo_url = get_template_directory_uri() ."/assets/logos/affarshogskolan_new_white.svg";
 				}
-				if(get_current_blog_id()==3){
-					$logo_url = get_template_directory_uri() ."/assets/logos/vardyrkeshogskolan_new_white.svg";
+				if($blog_id == 3){
+					$logo_url = get_template_directory_uri() ."/assets/logos/vardyrkeshogskolan_new.svg";
 				}
-				if(get_current_blog_id()==4){
+				if($blog_id == 4){
 					$logo_url = get_template_directory_uri() ."/assets/logos/teknikhogskolan_new_white.svg";
 				}
 				?>

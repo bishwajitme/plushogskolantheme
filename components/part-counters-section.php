@@ -22,7 +22,7 @@ $raknare_background = get_sub_field('raknare_background');
 
                     ?>
 
-                    <div class="text-white counters-entry col-lg-4 col-md-4 col-sm-12 col-xs-12 p-4 border-right">
+                    <div class="text-white counters-entry col-lg-4 col-md-6 col-sm-12 col-xs-12 p-4 border-right">
 
                         <h3><span class="timer count-title count-number" data-to="<?php echo $raknare_number; ?>"
                                   data-speed="2500">raknare_number</span><span><?php echo $raknare_sufix ?></span></h3>

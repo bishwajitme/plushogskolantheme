@@ -23,9 +23,10 @@ $senaste_nyheter = new WP_Query($args);
 
 		<div class="row">
 			<div class="aspekter-entry col-12 p-2">
-				<div class="senaste-nyhetsavsnittet_image_container float-right mb-4 col-md-6 col-12"><img class="senaste-nyhetsavsnittet_image img-fluid z-depth-2 float-right"
+				<div class="senaste-nyhetsavsnittet_image_container float-right mb-4 col-md-6 col-12">
+					<a href="/nyheter" title="Läs alla våra intervjuer"><img class="senaste-nyhetsavsnittet_image img-fluid z-depth-2 float-right"
 					src="<?php echo $senaste_nyhetsavsnittet_blid['url'] ?>"
-					alt="Nyhetsavsnittet blid"/></div>
+					alt="Nyhetsavsnittet blid"/></a></div>
 					<div class="senaste-nyhetsavsnittet_container float-left col-md-6 col-12">
 						<h2 class="section_title text-left pt-2 pb-2">Senaste nytt hos oss</h2>
 

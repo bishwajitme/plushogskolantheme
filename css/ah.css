@@ -6,6 +6,13 @@
  .primary, .ej_sokbarbox .arrow_right_container, .sidebar_menu li.current-menu-item::before{
     background-color:#00677f;
 }
+.mv_studentavdelning_image, .senaste-nyhetsavsnittet_image  {
+    box-shadow: -15px -15px 1px rgba(0, 103, 127, .5);
+    -moz-box-shadow: -15px -15px 1px rgba(0, 103, 127, .5);
+    -webkit-box-shadow: -15px -15px 1px rgba(0, 103, 127, .5);
+    -khtml-box-shadow: -15px -15px 1px rgba(0, 103, 127, .5);
+
+}
 .siteBg.secondary:after {
     background: linear-gradient(180deg, #f8004e 0, #c5003e);
 
@@ -15,10 +22,10 @@
 #62a1b4 0,
     #00677f);
 }
-.icon_container{
+.icon_container, .round_button{
     background:rgba(0, 103, 127, .7); 
 }
-.btn-primary, .float_ansok_button {
+.btn-primary, .float_ansok_button, body .btn-primary:not(:disabled):not(.disabled):active {
     background-color:#c5003e;
     border-color:#c5003e;
     color: #fff !important;

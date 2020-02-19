@@ -1,77 +1,138 @@
-.navbar, .main-navigation ul ul{
-    background:rgba(193,160,30, .95);
-    z-index: 9999;
+.main-navigation ul ul{
+	background:#eaeaea;
+	z-index: 9999;
 }
- .site-footer, .site-header, .part-vittnesmal-section, .ff-label-wrapper.custom, #search-filter-form-7257, .siteBg,
- .primary, .ej_sokbarbox .arrow_right_container, .sidebar_menu li.current-menu-item::before{
-    background-color:#c1a01e;
+.part-vittnesmal-section, .ff-label-wrapper.custom, #search-filter-form-7257, .siteBg,
+.primary, .ej_sokbarbox .arrow_right_container, .sidebar_menu li.current-menu-item::before{
+	background-color:#c1a01e;
+}
+.site-footer, .site-header, .navbar{
+	background-color:#eaeaea;
+}
+.site_vh .site-footer a, .site_vh .site-footer a:hover,  .site_vh .site-footer {
+	color: #343434;
+}
+
+.site_vh .social_icons_rounded ul li a{
+	border-color: #c1a01e;
+	background-color: #c1a01e;
+}
+.site_vh .counters-entry {
+	background: #fff;
+	color: #343434 !important;
+	border-radius: 170px;
+	height: 340px;
+	max-width: 340px;
+	margin: 10px auto;
+	padding-left: 40px !important;
+	padding-top: 70px !important;
+	text-align: center;
+}
+
+.site_vh .counters-entry a, .site_vh .mot_event .section_title a{
+	color: #343434;
+	}
+	.site_vh .counters-entry a:hover{
+	color: rgba(52,52,52,.8);
+	}
+.site_vh .counters-entry h3, .main-navigation li a, .main-navigation li a:hover,
+h3.nyheter_title.card-title
+{
+	color: #7d670d;
+}
+
+.main-navigation li a:hover{
+	opacity: .7;
+}
+
+.main-navigation li ul a:hover{
+	opacity: .7;
+}
+.tick_marker_bg{
+	background-color: #c1a01e;
+}
+
+.site_vh .site-info-text, .site_vh .site-info-text a {
+	color: #343434;
+}
+
+.mv_studentavdelning_image, .senaste-nyhetsavsnittet_image {
+	box-shadow: -15px -15px 1px rgba(193,160,30, .5);
+	-moz-box-shadow: -15px -15px 1px rgba(193,160,30, .5);
+	-webkit-box-shadow: -15px -15px 1px rgba(193,160,30, .5);
+	-khtml-box-shadow: -15px -15px 1px rgba(193,160,30,.5);
+
 }
 .siteBg.secondary:after {
-    background: linear-gradient(180deg, #f8004e 0, #c1a01e);
+	background: linear-gradient(180deg,#973d61 0,#732e4a);
 
 }
 .siteBg.primary:after {
-    background: linear-gradient(180deg, #62a1b4 0,#c1a01e);
+	background: linear-gradient(to bottom,  #7d670d 0%,#caa910 100%);
 }
-.icon_container span.iconimg{
-    background:rgba(193,160,30, .7); 
+.site_vh #program_sidebar .primary, .site_vh #studieorter_sidebar .primary{
+	background-color:#732e4a;
 }
-.btn-primary, .float_ansok_button {
-    background-color:#732e4a;
-    border-color:#732e4a;
-    color: #fff !important;
+.icon_container, .round_button{
+	background:rgba(193,160,30, .7); 
+}
+.btn-primary, .float_ansok_button, body .btn-primary:not(:disabled):not(.disabled):active {
+	background-color:#732e4a;
+	border-color:#732e4a;
+	color: #fff !important;
 }
 .content-area ul li::before{
-  background-color:#732e4a;
+	background-color:#732e4a;
 }
 .content-area ol li::before, blockquote p:first-child::before{
- color:#732e4a;
+	color:#732e4a;
 }
+
 .btn-primary:hover {
-    background-color:#732e4a;
-    border-color:#732e4a;
+	background-color:#732e4a;
+	border-color:#732e4a;
 }
 .bg-light {
-    background:#f2f2f2 !important;
-    
+	background:#f2f2f2 !important;
+
 }
 .header_overlay {
-    background: rgba(193,160,30,.5);
+	background: rgba(0,0,0,.5);
 }
 .spicewpsearchform{
-    border: 5px solid rgb(193,160,30);
+	border: 5px solid rgb(193,160,30);
 }
 
 .class_kurs:hover {
-    background-color: rgba(115, 46, 74,.15);
-    color: #a58938;
- }
+	background-color: rgba(115, 46, 74,.15);
+	color: #a58938;
+}
 .md-accordion .card-header, .ej_sokbarbox {
-    border-bottom: 1px solid rgba(193,160,30,.4);
+	border-bottom: 1px solid rgba(193,160,30,.4);
 }
 .ej_sokbarbox{
-    border-top: 1px solid rgba(0, 89, 79,.4);;
+	border-top: 1px solid rgba(0, 89, 79,.4);
 }
 
 .class_certi:hover {
-    background-color: rgba(137, 118, 48,.15);
-        color: #a58938;
- }
+	background-color: rgba(137, 118, 48,.15);
+	color: #a58938;
+}
 
 .class_yh {
-    background: #f2f2f2;
+	background: #f2f2f2;
 }
 .class_yh:hover {
-      background-color: rgba(193, 160, 30,.22);
-        color: #a58938;
- }
+	background-color: rgba(193, 160, 30,.22);
+	color: #a58938;
+}
 
 
 .certifiering{
-    background-color: rgb(137, 118, 48);
+	background-color: rgb(137, 118, 48);
 }
 .kurs{
-    background-color: rgb(115, 46, 74);
+	background-color: rgb(115, 46, 74);
 }
 
 
@@ -80,11 +141,15 @@
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a, .site-content a:hover, .entry-content h1,  .entry-content h2, .entry-content h3, .entry-content h4, .ico-class, .md-accordion .card-header a, .page-title-single {
-    color: #c1a01e;
+a, .site-content a:hover, .entry-content h1,  .entry-content h2, .entry-content h3, .entry-content h4, .ico-class, .md-accordion .card-header a{
+	color: #7d670d;
 }
 a:hover{
-   color: rgba(193,160,30,.7);
+	color: rgba(193,160,30,.7);
+}
+.page-title-single {
+    color: 
+    #343434;
 }
 
 /*--------------------------------------------------------------
@@ -92,19 +157,19 @@ a:hover{
 --------------------------------------------------------------*/
 
 h1, h2, h3, h4, h5, h6{
-    font-family: "Gotham SSm 7r", "Gotham SSm A", "Gotham SSm B";
-    font-style: normal;
-    font-weight: 700;
+	font-family: "Gotham SSm 7r", "Gotham SSm A", "Gotham SSm B";
+	font-style: normal;
+	font-weight: 700;
 }
 @keyframes scroll {
-    0%      {margin-top: 0px;}
-    20%     {margin-top: 0px;}
+	0%      {margin-top: 0px;}
+	20%     {margin-top: 0px;}
 
-    30%  {margin-top: -40pt;}
-    50%  {margin-top: -40pt;}
+	30%  {margin-top: -40pt;}
+	50%  {margin-top: -40pt;}
 
-    60%  {margin-top: -80pt;}
-    80%  {margin-top: -80pt;}
+	60%  {margin-top: -80pt;}
+	80%  {margin-top: -80pt;}
 
-    100% {margin-top: 0px;}
+	100% {margin-top: 0px;}
 }

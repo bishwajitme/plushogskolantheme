@@ -45,9 +45,9 @@
                 "value": "page"
             },
             {
-                "param": "post_taxonomy",
-                "operator": "==",
-                "value": "sidtyp:artikelsida"
+                "param": "post_template",
+                "operator": "!=",
+                "value": "page-template-home.php"
             }
         ],
         [
@@ -92,5 +92,5 @@
     ],
     "active": 1,
     "description": "- Nyheter, Artikelsidor, Studieort, Pressida",
-    "modified": 1579609307
+    "modified": 1581074140
 }

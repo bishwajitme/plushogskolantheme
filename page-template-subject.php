@@ -6,9 +6,16 @@
  */
 
 get_header();
+ $email_address = get_field('email_address', 'option');
+  $phone_number = get_field('phone_number', 'option');
+  $utbildninger_page = get_page_by_path( 'utbildningar' );
+   $utbildninger_page_id = $utbildninger_page -> ID;
+$sidebar_button_text = get_field('sidebar_button_text', $utbildninger_page_id);
+$sidebar_button_link = get_field('sidebar_button_link', $utbildninger_page_id);
 ?>
 
 <div class="row">
+  
 	<div id="primary" class="content-area col-12">
 		<main id="main" class="site-main">
             <div class="container">
@@ -52,9 +59,27 @@ get_header();
                 ?>
                 <?php if ($utbildninger): ?>
                     <!-- #row utbilding-->
-                    <h2 class="pt-4 mt-4 pb-3 text-center">Våra utbildningar i 
-                      <?php echo get_term( $subject_id )->name;; ?></h2>
-                    <div class="row justify-content-center">
+        
+                    <div class="row">
+                          <div id="filter_form" class="form-area col-12 col-md-3">
+
+        <div class="sidecontent d-none d-lg-block">
+         <?php if($sidebar_button_link != ""):?>
+          <p class="mb-0 mt-3"> <span class="font-weight-bold d-block">Vill du inleda en ny karriär?</span>Gå vidare med din ansökan!</p>
+          <a href="<?php echo $sidebar_button_link; ?>" class="btn btn-primary ansok_button btn-md mt-3 mb-4"><?php echo $sidebar_button_text; ?></a>
+
+           <?php endif;?>
+
+      <p class="font-weight-bold d-block mb-0">  Kom i kontakt med oss</p>
+      <p>Behöver mer info innan du bestämmer dig? Kontakta oss på <a href="tel:<?php echo $phone_number; ?>"> <?php echo $phone_number; ?> </a>
+        eller <a href="mailto:<?php echo $email_address; ?>"><?php echo $email_address; ?></a>.</p>
+       <p class="font-weight-bold d-block mb-0">Ska vi skicka dig mer info?</p>
+        <p>Gör en <a href='/om-oss/intresseanmalan/' style="text-decoration: underline;"><strong>intresseanmälan</strong> </a>
+        så håller vi dig uppdaterad om vad som är på gång!</p>
+    </div>
+</div>
+    <div  class="program-area col-12 col-md-9">
+         <div class="row">
 
                         <?php foreach ($utbildninger as $utbildning): ?>
                             <?php
@@ -143,6 +168,8 @@ get_header();
                             </div>
 
                         <?php endforeach; ?>
+                         </div>
+                         </div>
                     </div> <!-- #row utbilding-->
                 <?php endif; ?>
 

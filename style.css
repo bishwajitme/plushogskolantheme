@@ -1132,7 +1132,7 @@ object {
     padding: 10px;
     font-weight: normal;
     margin-left: 0 !important;
-    margin-right: 20px !important;
+   
 }
 .home .links_container {
     margin-top: 20px;
@@ -1169,6 +1169,17 @@ object {
     font-weight: bold;
 }
 
+.links_container.home-desktop{
+    display: none;
+}
+
+.links_container.home-mobile{
+display: block;
+}
+.mobmenul-container {
+    margin-top: 5px !important;
+    }
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
@@ -1182,7 +1193,7 @@ object {
 }
 
 .footer-logo img {
-    max-width: 160px;
+    max-width: 130px;
     display: block;
     margin: 20px auto;
     width: 60%;
@@ -1199,7 +1210,7 @@ object {
     padding: 4px 0;
 }
 
-.site-footer a {
+.site-footer a, .site-footer a:hover {
     color: #fff;
 }
 
@@ -1243,7 +1254,9 @@ object {
     padding: 10px;
     text-align: center;
 }
-
+#mobmenuleft li a{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
 
 /*--------------------------------------------------------------
 ## sidebar
@@ -1358,6 +1371,8 @@ object {
     transform: translate3d(-10px, 0, 0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    height: 200px;
+    object-fit: cover;
 }
 
 .hovereffect:hover img {
@@ -1376,9 +1391,14 @@ object {
     overflow: hidden;
     padding: 0.5em 0;
     background-color: transparent;
-    -webkit-transform: translateY(45px);
-    -ms-transform: translateY(45px);
-    transform: translateY(45px);
+    min-width: 200px;
+}
+.overlay_content_wrapper{
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 .hovereffect h2:after {
@@ -1418,13 +1438,16 @@ object {
 .hovereffect:hover a, .hovereffect:hover p {
     opacity: 1;
     filter: alpha(opacity=100);
-    -webkit-transform: translate3d(0, 45px, 0);
-    transform: translate3d(0, 45px, 0);
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
 }
 
 .orter_text {
     font-size: 1.3em;
 }
+.orter_text a{
+    text-decoration: underline;
+    }
 .ej_sokbarbox .arrow_right_container {
     position: relative;
     right: unset;
@@ -1470,10 +1493,7 @@ object {
 ## part-mot_vara_studentavdelning
 --------------------------------------------------------------*/
 .mv_studentavdelning_image {
-    box-shadow: -15px -15px 1px rgba(0, 103, 127, .5);
-    -moz-box-shadow: -15px -15px 1px rgba(0, 103, 127, .5);
-    -webkit-box-shadow: -15px -15px 1px rgba(0, 103, 127, .5);
-    -khtml-box-shadow: -15px -15px 1px rgba(0, 103, 127, .5);
+   
     width: 95%;
     height: 95%;
     position: absolute;
@@ -1489,10 +1509,6 @@ object {
 ## part-senaste-nyhetsavsnittet
 --------------------------------------------------------------*/
 .senaste-nyhetsavsnittet_image {
-    box-shadow: 15px 15px 1px rgba(0, 103, 127, .5);
-    -moz-box-shadow: 15px 15px 1px rgba(0, 103, 127, .5);
-    -webkit-box-shadow: 15px 15px 1px rgba(0, 103, 127, .5);
-    -khtml-box-shadow: 15px 15px 1px rgba(0, 103, 127, .5);
     width: 100%;
     height: 95%;
     position: relative;
@@ -1536,7 +1552,7 @@ h3.nyheter_title.card-title {
     justify-content: space-between;
     transition: all 0.2s ease 0s;
     border-radius: 15px;
-    min-height: 230px;
+    min-height: 250px;
 }
 .icon_container:hover {
     transform: scale(1.05);
@@ -1573,7 +1589,20 @@ h3.nyheter_title.card-title {
 .separator-space {
     height: 10px;
 }
+.carousel-multi-item .carousel-inner.v-2 .carousel-item.active, .carousel-multi-item .carousel-inner.v-2 .carousel-item-next, .carousel-multi-item .carousel-inner.v-2 .carousel-item-prev {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.round_button {
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
 
 /*--------------------------------------------------------------
 ## counter
@@ -1588,6 +1617,7 @@ h3.nyheter_title.card-title {
     font-size: 1.2em;
 }
 
+
 /*--------------------------------------------------------------
 ## event
 --------------------------------------------------------------*/
@@ -1599,6 +1629,7 @@ h3.nyheter_title.card-title {
     padding: 5px 15px;
     color: #fff;
     font-weight: normal;
+    text-transform: capitalize;
 }
 
 .event-entry .card-img-top {
@@ -1615,7 +1646,7 @@ h3.nyheter_title.card-title {
 
 .arrow_right_container {
     position: absolute;
-    right: 40px;
+    right: 20px;
     bottom: 20px;
     background: #fff;
     height: 40px;
@@ -1624,7 +1655,12 @@ h3.nyheter_title.card-title {
     border-radius: 50%;
     line-height: 40px;
 }
-
+#secondary .arrow_right_container {
+ right: 5px;
+}
+.mot_event .arrow_right_container{
+    right: 40px;
+}
 .event-entry .card-text {
     padding-bottom: 30px;
 }
@@ -1836,7 +1872,7 @@ border-radius: 0;
 .header_meta_scope {
     border-bottom: 2px solid #fff;
     padding-bottom: 10px;
-    max-width: 400px;
+    max-width: 500px;
     width: 90%;
     font-size: 24px;
     margin-bottom: 20px;
@@ -2019,8 +2055,8 @@ border-radius: 0;
 .publish_date_cat.mb-2 {
     text-transform: capitalize;
 }
-.single-nyhet .site-header {
-  max-height: 75px;
+.single-nyhet .site-header, .page-template-page-template-thankyou .site-header{
+  max-height: 99px;
   min-height: unset;
 }
 
@@ -2629,6 +2665,7 @@ box-shadow: inset 4px 4px 15px 3px rgba(0,0,0,0.20);
 -moz-box-shadow: inset 4px 4px 15px 3px rgba(0,0,0,0.20);
 border: none !important;
 border-radius: 2px !important;
+ margin-right: 20px !important;
     }
     .float_ansok_button {
     width: 150px;
@@ -2644,6 +2681,13 @@ border-radius: 2px !important;
   -o-transform: rotate(-90deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
     
+}
+.hovereffect h2 {
+ -webkit-transform: translateY(50%);
+
+-ms-transform: translateY(50%);
+
+transform: translateY(50%);
 }
 
 }
@@ -2668,7 +2712,7 @@ you can add resource intensive styles.
 
     ******************************************************************/
     h1 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
 
     .hero_text {
@@ -2754,9 +2798,7 @@ box-shadow: 0px 14px 22px 4px rgba(0,0,0,0.63);
         padding: 5px 10px;
     }
 
-    .counters-entry:last-child {
-        border-right: 0 !important;
-    }
+   
 
     .single-utbildning .links_container {
         display: block;
@@ -2856,6 +2898,17 @@ box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 transition: all 0.4s ease 0s;
 display: inline-block;
     }
+    .hovereffect h2 {
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+}
+.links_container.home-desktop {
+    display: block;
+}
+.links_container.home-mobile{
+display: none;
+}
 
 }
 
@@ -2874,17 +2927,50 @@ This is for the larger monitors and possibly full screen viewers.
     on larger screens.
 
     ******************************************************************/
-    .carousel-control-next {
+    .part-vittnesmal-section .carousel-control-next {
         right: -120px;
     }
 
-    .carousel-control-prev {
+    .part-vittnesmal-section .carousel-control-prev {
         left: -120px;
     }
 
     .site-footer h3 {
         font-size: 1.4rem;
     }
+    .hovereffect img {
+    height: 250px;
+   
+}
+.page-template-page-template-faq #main {
+    max-width: 75%;
+    margin: auto;
+}
+
+
+}
+
+/*********************
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*********************/
+@media only screen and (min-width: 1300px) {
+    /******************************************************************
+    Site Name:
+    Author:
+
+    Stylesheet: Super Large Monitor Stylesheet
+
+    You can add some advanced styles here if you like. This kicks in
+    on larger screens.
+
+    ******************************************************************/
+   
+    .hovereffect img {
+    height: 300px;
+   
+}
+
 
 }
 
@@ -2985,10 +3071,16 @@ be set to display none.
     .home .links_container.home-desktop{
         display: none;
     }
-    .utbildningsomraden{
-        margin-top: 0 !important;
-        padding-top: 0 !important;
+    .utbildningsomraden, .part-samarbetsforetag-avsnitt.home-section{
+           margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
     }
+    .extra-content {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
     .amne-entry .overlay p{
         display: none;
     }
@@ -2999,6 +3091,14 @@ be set to display none.
     max-height: 160px;
     object-fit: cover;
 }
+.utbildningsomraden h2.section_title {
+    margin-top: 0 !important;
+    margin-bottom: 5px !important;
+    padding-top: 5px !important;
+}
+ .counters-entry {
+        border-right: 0 !important;
+    }
     
 }
 
@@ -3043,6 +3143,9 @@ be set to display none.
 }
 .faq_header{
 	font-size: 16px;
+}
+.slideCol{
+    padding-left: 0 !important;
 }
 
 }

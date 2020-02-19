@@ -9,10 +9,11 @@ get_header();
 $utbildning_page_form = get_field('utbildning_page_form');
  $email_address = get_field('email_address', 'option');
   $phone_number = get_field('phone_number', 'option');
-
+$sidebar_button_text = get_field('sidebar_button_text');
+$sidebar_button_link = get_field('sidebar_button_link');
   
 
-
+sidebar_button_link
 
 ?>
 <div class="row">
@@ -25,9 +26,11 @@ $utbildning_page_form = get_field('utbildning_page_form');
         <?php echo do_shortcode('[searchandfilter id="'. $utbildning_page_form .'"]'); ?>
         </div>
         <div class="sidecontent d-none d-lg-block">
-         
-          <p class="mb-0 mt-3"> <span class="font-weight-bold d-block">Vill du inleda en ny karriär?</span>Gå vidare med din ansökan!</p>
-          <a href="/om-oss/intresseanmalan/" class="btn btn-primary ansok_button btn-md mt-3 mb-4">Ansök här</a>
+         <?php if($sidebar_button_link != ""):?>
+          <p class="mb-0 mt-3"> <span class="font-weight-bold d-block">Vill du inleda en ny karriär?</span>Gå vidare med din ansökan!</p>
+          <a href="<?php echo $sidebar_button_link; ?>" class="btn btn-primary ansok_button btn-md mt-3 mb-4"><?php echo $sidebar_button_text; ?></a>
+
+           <?php endif;?>
 
       <p class="font-weight-bold d-block mb-0">  Kom i kontakt med oss</p>
       <p>Behöver mer info innan du bestämmer dig? Kontakta oss på <a href="tel:<?php echo $phone_number; ?>"> <?php echo $phone_number; ?> </a>
@@ -59,6 +62,8 @@ $utbildning_page_form = get_field('utbildning_page_form');
          
           <p class="mb-0 mt-3"> <span class="font-weight-bold d-block">Vill du inleda en ny karriär?</span>Gå vidare med din ansökan!</p>
           <a href="/om-oss/intresseanmalan/" class="btn btn-primary ansok_button btn-md mt-3 mb-4">Ansök här</a>
+
+
 
       <p class="font-weight-bold d-block mb-0">  Kom i kontakt med oss</p>
       <p>Behöver mer info innan du bestämmer dig? Kontakta oss på <a href="tel:<?php echo $phone_number; ?>"> <?php echo $phone_number; ?> </a>

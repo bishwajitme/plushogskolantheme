@@ -18,22 +18,33 @@
         <link rel="profile" href="https://gmpg.org/xfn/11">
 
         <?php wp_head();
-
-        if (get_current_blog_id() == 2) {
+        $blog_id = get_current_blog_id();
+        if ($blog_id == 2) {
             $css_url = get_template_directory_uri() . "/css/ah.css";
         }
-        if (get_current_blog_id() == 3) {
+        if ($blog_id == 3) {
             $css_url = get_template_directory_uri() . "/css/vh.css";
         }
-        if (get_current_blog_id() == 4) {
+        if ($blog_id == 4) {
             $css_url = get_template_directory_uri() . "/css/th.css";
         }
         ?>
         <link rel='stylesheet' id='sitespecific-style-css' href='<?php echo $css_url; ?>' type='text/css' media='all'/>
         <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6256616/7040012/css/fonts.css"/>
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N9HDHQ');</script>
+<!-- End Google Tag Manager -->
     </head>
 
 <body <?php body_class(); ?>>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9HDHQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <?php if (is_home() || is_front_page() || is_singular('utbildning')) :
     $bgimage = get_field('pageHeroImage')['url'];
@@ -68,13 +79,13 @@ if ($bgimage == "" || $bgimage == NULL) {
 if ($bgimage == "" || $bgimage == NULL) {
     $bgimage = '/wp-content/themes/plushogskolan/assets/images/default_bg.jpg';
 }
-if (get_current_blog_id() == 2) {
+if ($blog_id == 2) {
     $logo_url = get_template_directory_uri() . "/assets/logos/affarshogskolan_new_white.svg";
 }
-if (get_current_blog_id() == 3) {
-    $logo_url = get_template_directory_uri() . "/assets/logos/vardyrkeshogskolan_new_white.svg";
+if ($blog_id == 3) {
+    $logo_url = get_template_directory_uri() . "/assets/logos/vardyrkeshogskolan_new.svg";
 }
-if (get_current_blog_id() == 4) {
+if ($blog_id == 4) {
     $logo_url = get_template_directory_uri() . "/assets/logos/teknikhogskolan_new_white.svg";
 }
 
@@ -120,7 +131,7 @@ if (get_current_blog_id() == 4) {
 
 
         <div class="container title-container">
-            <?php if(!is_singular( 'nyhet' )):?>
+            <?php if(!is_singular( 'nyhet' ) && !is_page( 'tack') ):?>
              <h1 class="page-title" itemprop="headline"><?php echo $hero_title; ?></h1>
             <?php endif; ?>
            
@@ -185,7 +196,7 @@ if (!is_front_page()) {
  <?php // check if the repeater field has rows of data
             if (is_front_page()) {
                 if (have_rows('preambleLinks')):
-                    echo '<p class="links_container home-mobile d-md-block d-lg-none text-center">';
+                    echo '<p class="links_container home-mobile text-center">';
                     // loop through the rows of data
                     while (have_rows('preambleLinks')) : the_row();
                         // display a sub field value

@@ -29,24 +29,42 @@ get_header();
                     $metaPoints = get_field('metaPoints');
                     $meta_location = get_field('metaLocation');
                     $yh_apply_link = get_field('yh_apply_link');
+                    $meta_locationText = get_field('metaLocationText');
+                    //var_dump($meta_locationText);
+                    $distance_loc = FALSE;
+                    $meta_location_array = [];
               
-                    // $meta_locationText = get_field('metaLocationText');
                     if ($meta_location):
                         $meta_location_count = count($meta_location);
                         $counter = 1;
                         $meta_location_text = '';
                         foreach ($meta_location as $location):
                             $location_title = get_the_title($location->ID);
-                            $meta_location_text = $meta_location_text . $location_title;
+                            $meta_location_array[] = $location_title;
+                        endforeach;
 
+                        $meta_location_text = '';
+                        sort($meta_location_array);
+                        foreach ($meta_location_array as $locationTitle):
+                            $meta_location_text = $meta_location_text .$locationTitle;
                             if ($counter < $meta_location_count) {
                                 $meta_location_text = $meta_location_text . ', ';
                             }
                             $counter++;
                         endforeach;
+                        
                     endif;
 
                 endwhile; // End of the loop.
+
+                /* find if it is Distans education */
+                    $distance_loc = in_array("Distans", $meta_location_array);
+                
+
+
+                    if ($meta_locationText == "") {
+                        $meta_locationText = $meta_location_text;
+                    }
                 ?>
                 <?php if($yh_apply_link != ""):?>
                 <a href="<?php echo $yh_apply_link; ?>" target="_blank" class="float_ansok_button">Ansök Nu</a>
@@ -86,7 +104,16 @@ get_header();
 
                         <?php if ($meta_location_text != ""): ?>
                             <p class="kurs_mta"><span
-                                        class="meta_lebel">Studieort</span><span><?php echo $meta_location_text; ?></span></p>
+                                        class="meta_lebel">Studieort</span><span><?php 
+
+                                        if($distance_loc){
+                                           echo $meta_locationText;
+                                          }
+                                          else{
+                                              echo $meta_location_text;
+                                          }
+
+                                        ?></span></p>
                         <?php endif; ?>
 
                         <?php if ($metaDeadline != ""): ?>
